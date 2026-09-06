@@ -1,0 +1,6 @@
+#!/bin/sh
+# Keep the user's normal Neovim installation and plugin data separate.
+set -eu
+COFFE_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export NVIM_APPNAME=coffe
+exec nvim -u "$COFFE_ROOT/init.lua" "$@"
