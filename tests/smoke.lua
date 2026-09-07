@@ -28,8 +28,10 @@ check(vim.fn.readfile(tmp..'/hello.txt')[1]=='hello world changed','save writes 
 local tree=require('coffe.explorer')
 tree.open()
 check(vim.api.nvim_win_is_valid(tree.win),'tree opens')
+check(vim.api.nvim_get_current_win()==tree.win,'tree receives focus')
 check(vim.api.nvim_win_get_position(tree.win)[2]==0,'tree on left')
-check(vim.api.nvim_buf_get_lines(tree.buf,3,4,false)[1]:find('folder',1,true),'directories first')
+local first_entry = tree.entries[9]
+check(first_entry and first_entry.name == 'folder','directories first')
 vim.api.nvim_set_current_win(tree.win)
 local fileline
 for line,item in pairs(tree.entries) do if item.name=='hello.txt' then fileline=line end end

@@ -15,6 +15,9 @@ As a plugin: require('coffe').setup({...}). See examples/lazy.lua.
 :CoffeKeys          Keyboard guide
 :checkhealth coffe  Requirements and clipboard diagnostics
 
+Dashboard: large responsive COFFE logo and centered actions. Use j/k, arrows,
+Tab/Shift-Tab to select, Enter to run, or press the key shown on a button.
+
 Default leader in standalone mode: Space. Existing user maps take precedence.
 Space e: explorer. Space ff/fg: files/text. Space h: home. Space ,: settings.
 Space y/p: copy/paste. u/Ctrl-R: undo/redo. F8: delete entire line, also in Insert.

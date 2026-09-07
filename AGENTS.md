@@ -1,14 +1,157 @@
-# Coffe
+# Coffe.nvim
 
-Neovim 0.11+ Lua plugin and optional standalone configuration. Preserve native editing commands; add ergonomic shortcuts without replacing Ctrl-R, Ctrl-V, Ctrl-W or `u`.
+## Что это за проект
 
-- `lua/coffe/`: core setup, dashboard, project persistence, actions, lazy specs.
-- `init.lua`: standalone entry; `coffe.lua`: user-facing configuration.
-- `plugin/coffe.lua`: commands for plugin installations (setup is explicit).
-- `scripts/coffe`: isolated launcher using NVIM_APPNAME=coffe; does not replace existing Neovim configuration.
-- `examples/`: integration and optional terminal bindings.
-- `tests/run.sh`: isolated headless behavior tests, no network needed.
+Coffe.nvim — Lua-плагин и самостоятельная сборка для Neovim 0.11+. Проект делает
+Neovim удобнее для повседневной работы: добавляет кофейный стартовый экран,
+управление проектами, файловую панель, поиск, понятные сочетания клавиш и Gruvbox
+Dark. Нативные режимы и команды Neovim должны оставаться доступными.
 
-Run `./scripts/coffe`; run tests with `bash tests/run.sh`; check whitespace with `git diff --check`.
-Core must work without downloaded plugins. Optional lazy dependencies provide Neo-tree, Telescope, Gruvbox, completion, Git signs and key hints. External plugin changes need a real startup check when network is available.
-Never modify the user's Neovim or terminal configuration automatically. Cmd shortcuts require terminal support; document portable alternatives. Use structured process arguments and escaped Ex paths. Never silently discard modified buffers or overwrite project files.
+Проект работает в двух режимах:
+
+1. **Самостоятельная сборка** — `./scripts/coffe` запускает корневой `init.lua` с
+   `NVIM_APPNAME=coffe`. Настройки и данные изолированы от обычного Neovim.
+   lazy.nvim загружает рекомендуемые внешние плагины.
+2. **Плагин для существующего Neovim** — пользователь добавляет репозиторий в свой
+   менеджер плагинов и вызывает `require("coffe").setup(opts)`. В этом режиме Coffe
+   не должен запускать собственный bootstrap lazy.nvim.
+
+Основные функции должны работать без сети и без внешних Lua-плагинов. Если Neo-tree
+или Telescope доступны, Coffe использует их; иначе включает собственные файловую
+панель и picker. Языковые серверы, форматтеры и отладчики в проект не входят.
+
+## Поток запуска
+
+Самостоятельный запуск проходит так:
+
+```text
+scripts/coffe
+  -> NVIM_APPNAME=coffe + корневой init.lua
+  -> coffe.lua (пользовательские настройки)
+  -> require("coffe").setup(config) (ядро, клавиши, команды, autocmd)
+  -> require("coffe.bootstrap").setup(config.plugins) (lazy.nvim и плагины)
+```
+
+При подключении к существующей конфигурации выполняется только
+`require("coffe").setup(opts)`. Пример находится в `examples/lazy.lua`.
+
+## Структура
+
+```text
+Coffe_nvim/
+├── init.lua                 # точка входа самостоятельной сборки
+├── coffe.lua                # простой пользовательский конфиг сборки
+├── lazy-lock.json           # проверенные версии внешних плагинов
+├── plugin/coffe.lua         # только guard loaded_coffe; setup остаётся явным
+├── colors/coffe.lua         # встроенная Gruvbox-подобная тема для offline-режима
+├── lua/coffe/
+│   ├── init.lua             # публичный setup, опции, keymaps и autocmd
+│   ├── config.lua           # значения по умолчанию, merge и валидация настроек
+│   ├── commands.lua         # :Coffe и вспомогательные пользовательские команды
+│   ├── actions.lua          # маршрутизация действий к внешним или встроенным UI
+│   ├── dashboard.lua        # стартовый экран Coffe
+│   ├── projects.lua         # создание, открытие и история проектов
+│   ├── explorer.lua         # встроенная файловая панель без зависимостей
+│   ├── picker.lua           # встроенный поиск файлов, текста и выбор элементов
+│   ├── bootstrap.lua        # установка и запуск lazy.nvim только для сборки
+│   ├── plugins.lua          # стандартный набор lazy.nvim plugin specs
+│   ├── health.lua           # :checkhealth coffe
+│   └── util.lua             # пути, scratch-буферы, безопасное открытие и notify
+├── doc/coffe.txt            # help-документация Neovim
+├── examples/
+│   ├── init.lua             # полностью автономный offline-пример
+│   ├── coffe_config.lua     # конфиг автономного примера
+│   ├── lazy.lua             # подключение к lazy.nvim / LazyVim
+│   └── ghostty.conf         # ручная передача Cmd-Backspace как F8
+├── scripts/coffe            # изолированный launcher
+└── tests/
+    ├── run.sh               # общий offline test runner
+    ├── core.lua             # ядро, команды, undo и безопасность проектов
+    ├── smoke.lua            # пользовательские сценарии и совместимость keymaps
+    ├── workflows.lua        # реальные операции explorer и поиска
+    └── plugins.lua          # проверка настоящих внешних плагинов
+```
+
+## Внешние компоненты
+
+Самостоятельная сборка через `lua/coffe/plugins.lua` подключает:
+
+- `gruvbox.nvim` — тема по умолчанию;
+- `neo-tree.nvim` — расширенная файловая панель;
+- `telescope.nvim` — поиск файлов и текста;
+- `lualine.nvim` — строка состояния;
+- `which-key.nvim` — подсказки сочетаний;
+- `gitsigns.nvim` — Git-маркеры;
+- `nvim-autopairs` — автоматические пары;
+- `nvim-cmp` с источниками buffer, path и nvim-lsp — автодополнение.
+
+`ripgrep` нужен для поиска по содержимому и ускоряет поиск файлов. Git нужен только
+для bootstrap и загрузки внешних плагинов. Пользователь может добавить стандартные
+lazy.nvim specs в поле `plugins` файла `coffe.lua`.
+
+## Основные решения и инварианты
+
+- Не заменять нативные `u`, `Ctrl-R`, `Ctrl-V`, `Ctrl-W` и обычные режимы Neovim.
+- Существующие пользовательские keymaps имеют приоритет над keymaps Coffe.
+- Dashboard открывается автоматически только при пустом запуске и не должен терять
+  несохранённый буфер.
+- Открытие проекта меняет cwd, но не закрывает и не сбрасывает открытые буферы.
+- Создание проекта никогда не перезаписывает существующий путь.
+- Встроенный explorer удаляет только файлы и пустые каталоги, всегда после выбора
+  `Delete`; загруженные файлы нельзя переименовывать или удалять.
+- Пути перед командами Ex экранировать через `vim.fn.fnameescape`; внешние процессы
+  запускать массивом аргументов через `vim.system` или `vim.fn.system`.
+- Cmd-сочетания зависят от терминала. Всегда сохранять переносимую клавишу: например,
+  `F8` для удаления строки. Не изменять конфиг терминала автоматически.
+- Не изменять `~/.config/nvim`, shell rc-файлы или пользовательские данные при запуске.
+- Состояние самостоятельной сборки хранится отдельно благодаря `NVIM_APPNAME=coffe`.
+- `COFFE_OFFLINE=1` запрещает bootstrap lazy.nvim; ядро при этом должно запускаться.
+
+## Изменение конфигурации
+
+Публичные defaults находятся в `lua/coffe/config.lua`, а готовый конфиг сборки — в
+`coffe.lua`. При добавлении или переименовании опции нужно синхронно обновить:
+
+- оба файла конфигурации;
+- README и `doc/coffe.txt`, если опция пользовательская;
+- `examples/coffe_config.lua` и при необходимости `examples/lazy.lua`;
+- тесты, которые фиксируют соответствующее поведение.
+
+Не вводить зависимость в ядро, если ту же функцию можно оставить доступной через
+fallback. Внешняя интеграция выбирается в `actions.lua`; реализация без зависимостей
+остаётся в `explorer.lua` или `picker.lua`.
+
+## Команды разработки
+
+```sh
+./scripts/coffe              # обычный изолированный запуск
+COFFE_OFFLINE=1 ./scripts/coffe
+bash tests/run.sh            # все offline-тесты
+git diff --check             # whitespace-проверка
+```
+
+`tests/run.sh` меняет XDG-каталоги на временные и не должен писать в пользовательскую
+конфигурацию Neovim. Для теста настоящих установленных зависимостей:
+
+```sh
+./scripts/coffe --headless '+luafile tests/plugins.lua'
+```
+
+Этот тест требует уже установленных зависимостей Coffe. После изменения bootstrap,
+plugin specs или lockfile дополнительно проверить чистый первый запуск с сетью.
+
+## Критерии готовности
+
+Перед завершением изменений:
+
+1. Выполнить `bash tests/run.sh`.
+2. Выполнить `git diff --check`.
+3. Для UI, dashboard, explorer или внешних плагинов проверить реальный запуск Neovim,
+   а не только Lua syntax/headless setup.
+4. Не заявлять поддержку Cmd-клавиш без проверки терминала; документировать fallback.
+5. Проверить, что новый dashboard, проект или файловая операция сохраняет изменённые
+   буферы и не перезаписывает существующие пути.
+
+README предназначен для пользователя. Этот `AGENTS.md` предназначен для разработчика
+или агента: он должен отражать фактическую архитектуру и обновляться только при
+изменении структуры, ключевых решений, команд запуска или ограничений проекта.

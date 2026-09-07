@@ -24,7 +24,9 @@ local function check()
   assert(vim.bo.filetype == "coffe")
   assert(vim.api.nvim_buf_get_lines(original, 0, 1, false)[1] == "unsaved text")
   assert(vim.bo[original].modified, "dashboard discarded changes")
-  assert(table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n"):find("Coffe"))
+  local dashboard = table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n")
+  assert(dashboard:find("██████", 1, true) or dashboard:find("C  O  F  F  E", 1, true), "large COFFE logo missing")
+  assert(not dashboard:find("Neovim, with a little coffee", 1, true), "old tagline is still visible")
   -- Stub explorer only to isolate project IO from interactive window management.
   local explorer = a.explorer
   a.explorer = function() end

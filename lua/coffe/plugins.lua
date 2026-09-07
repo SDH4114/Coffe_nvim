@@ -11,15 +11,29 @@ function M.spec()
       dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "nvim-tree/nvim-web-devicons" },
       opts = function()
         local c = require("coffe").config.explorer
-        return { window = { position = c.side, width = c.width },
+        return { popup_border_style = "rounded",
+          window = { position = c.side, width = c.width },
           filesystem = { follow_current_file = { enabled = true },
             filtered_items = { hide_dotfiles = false, hide_gitignored = true } } }
       end },
     { "nvim-telescope/telescope.nvim", branch = "0.1.x", cmd = "Telescope",
-      dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+      dependencies = { "nvim-lua/plenary.nvim" }, opts = {
+        defaults = {
+          prompt_prefix = "  > ", selection_caret = "  › ", entry_prefix = "    ",
+          sorting_strategy = "ascending", border = true,
+          file_ignore_patterns = { "^%.git/" },
+          layout_strategy = "horizontal",
+          layout_config = { prompt_position = "top", width = 0.86, height = 0.78, preview_width = 0.55 },
+        },
+      } },
     { "nvim-lualine/lualine.nvim", event = "VeryLazy", opts = {
-      options = { theme = "auto", globalstatus = true },
+      options = { theme = "auto", globalstatus = true,
+        component_separators = { left = "│", right = "│" },
+        section_separators = { left = "", right = "" },
+        disabled_filetypes = { statusline = { "coffe", "coffe_help", "coffe_picker" } },
+      },
       sections = { lualine_c = { { "filename", path = 1 } } },
+      extensions = { "neo-tree", "lazy" },
     } },
     { "folke/which-key.nvim", event = "VeryLazy", opts = { preset = "modern" } },
     { "lewis6991/gitsigns.nvim", event = { "BufReadPre", "BufNewFile" }, opts = {} },

@@ -1,7 +1,16 @@
 local M = {}
 local util = require('coffe.util')
+local ns = vim.api.nvim_create_namespace('coffe_picker')
+local function highlights()
+  vim.api.nvim_set_hl(0, 'CoffePickerNormal', { link = 'NormalFloat', default = true })
+  vim.api.nvim_set_hl(0, 'CoffePickerBorder', { link = 'FloatBorder', default = true })
+  vim.api.nvim_set_hl(0, 'CoffePickerTitle', { link = 'Title', default = true })
+  vim.api.nvim_set_hl(0, 'CoffePickerPrompt', { link = 'Special', default = true })
+  vim.api.nvim_set_hl(0, 'CoffePickerSelection', { link = 'Visual', default = true })
+end
 -- A small keyboard-first picker. No external UI plugin required.
 function M.open(title, items, accept)
+  highlights()
   local origin = vim.api.nvim_get_current_win()
   local buf = util.scratch('coffe_picker')
   local width = math.max(20, math.min(90, vim.o.columns - 4))
@@ -11,6 +20,11 @@ function M.open(title, items, accept)
     width=width, height=height, style='minimal', border='rounded', title=' '..title..' ', title_pos='center',
     footer=' type to filter · Enter open · Esc close ', footer_pos='center',
   })
+  vim.wo[win].cursorline = true
+  vim.wo[win].cursorlineopt = 'line'
+  vim.wo[win].wrap = false
+  vim.wo[win].winblend = 0
+  vim.wo[win].winhighlight = 'NormalFloat:CoffePickerNormal,FloatBorder:CoffePickerBorder,FloatTitle:CoffePickerTitle,CursorLine:CoffePickerSelection'
   local query, selected, filtered = '', 1, {}
   local function close()
     if vim.api.nvim_win_is_valid(win) then vim.api.nvim_win_close(win, true) end
@@ -22,13 +36,15 @@ function M.open(title, items, accept)
       if (item.label or tostring(item)):lower():find(query:lower(), 1, true) then filtered[#filtered+1] = item end
     end
     selected = math.max(1, math.min(selected, #filtered))
-    local lines = { '> '..query..'  ('..#filtered..')', '' }
+    local lines = { '  > '..query..'  ·  '..#filtered..' results', '' }
     local first = math.max(1, selected-height+3)
     for i=first, math.min(#filtered, first+height-3) do
       lines[#lines+1] = (i==selected and '› ' or '  ')..(filtered[i].label or tostring(filtered[i]))
     end
     if #filtered == 0 then lines[3] = '  No matches' end
     util.lines(buf, lines)
+    vim.api.nvim_buf_clear_namespace(buf, ns, 0, -1)
+    vim.api.nvim_buf_set_extmark(buf, ns, 0, 2, { end_col = #lines[1], hl_group = 'CoffePickerPrompt' })
     vim.api.nvim_win_set_cursor(win, { math.min(#lines, selected-first+3), 0 })
   end
   local function map(key, fn) vim.keymap.set('n', key, fn, { buffer=buf, nowait=true, silent=true }) end

@@ -18,11 +18,27 @@ function M.setup()
         '', 'Offline explorer: Enter open, a create, r rename, D delete',
         'Offline explorer: . hidden, R refresh, q close',
         'Neo-tree: press ? in the tree for available actions', '', 'Close help: q / Esc' })
+      vim.api.nvim_set_hl(0, 'CoffePickerNormal', { link = 'NormalFloat', default = true })
+      vim.api.nvim_set_hl(0, 'CoffePickerBorder', { link = 'FloatBorder', default = true })
+      vim.api.nvim_set_hl(0, 'CoffePickerTitle', { link = 'Title', default = true })
       local buf = require('coffe.util').scratch('coffe_help')
       require('coffe.util').lines(buf, lines)
-      vim.api.nvim_open_win(buf, true, { relative = 'editor', row = 1, col = 1,
-        width = math.max(1, math.min(78, vim.o.columns - 4)),
-        height = math.max(1, math.min(#lines, vim.o.lines - 5)), border = 'rounded', style = 'minimal' })
+      local width = math.max(1, math.min(78, vim.o.columns - 4))
+      local height = math.max(1, math.min(#lines, vim.o.lines - 6))
+      local win = vim.api.nvim_open_win(buf, true, {
+        relative = 'editor',
+        row = math.max(0, math.floor((vim.o.lines - height) / 2) - 1),
+        col = math.max(0, math.floor((vim.o.columns - width) / 2)),
+        width = width,
+        height = height,
+        border = 'rounded',
+        title = ' Coffe · Keyboard ',
+        title_pos = 'center',
+        footer = ' q / Esc close ',
+        footer_pos = 'center',
+        style = 'minimal',
+      })
+      vim.wo[win].winhighlight = 'NormalFloat:CoffePickerNormal,FloatBorder:CoffePickerBorder,FloatTitle:CoffePickerTitle'
       for _, key in ipairs({ 'q', '<Esc>' }) do vim.keymap.set('n', key, '<cmd>close<cr>', { buffer = buf }) end
     end,
   }
