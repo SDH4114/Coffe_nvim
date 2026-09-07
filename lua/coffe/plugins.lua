@@ -35,7 +35,14 @@ function M.spec()
       sections = { lualine_c = { { "filename", path = 1 } } },
       extensions = { "neo-tree", "lazy" },
     } },
-    { "folke/which-key.nvim", event = "VeryLazy", opts = { preset = "modern" } },
+    { "folke/which-key.nvim", event = "VeryLazy", opts = {
+      preset = "modern",
+      spec = {
+        { "<leader>f", group = "files" },
+        { "<leader>p", group = "projects" },
+        { "<leader>b", group = "buffers" },
+      },
+    } },
     { "lewis6991/gitsigns.nvim", event = { "BufReadPre", "BufNewFile" }, opts = {} },
     { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
     { "hrsh7th/nvim-cmp", event = "InsertEnter",

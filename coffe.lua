@@ -5,6 +5,7 @@ return {
   dashboard = true,
   clipboard = true,          -- use the system clipboard for normal copy/paste too
   undo = true,               -- remember undo history between launches
+  ui = { statusline = true }, -- built-in fallback; lualine replaces it when available
   mouse = true,
   numbers = true,
   relative_numbers = false,
@@ -12,7 +13,8 @@ return {
   explorer = { side = "left", width = 32, auto_open = false },
   projects = { root = "~/Projects", recent_limit = 20 },
   keys = {
-    explorer = "<leader>e", files = "<leader>ff", search = "<leader>fg",
+    palette = "<leader><space>", explorer = "<leader>e", files = "<leader>ff", search = "<leader>fg",
+    recent = "<leader>fr", buffers = "<leader>bb",
     dashboard = "<leader>h", settings = "<leader>,",
     copy = "<leader>y", paste = "<leader>p",
     undo = "<leader>u", redo = "<leader>U",

@@ -8,17 +8,20 @@ local function press(key) vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(k
 local function focus(name)
   tree.refresh(); vim.api.nvim_set_current_win(tree.win)
   for line,entry in pairs(tree.entries) do
-    if entry.name==name then vim.api.nvim_win_set_cursor(tree.win,{line,0}); return end
+    if entry.name==name then vim.api.nvim_win_set_cursor(tree.win,{line,0}); return entry end
   end
   error('Missing tree entry: '..name)
 end
 vim.ui.input=function(_,cb) cb(tmp..'/folder/') end
 press('a'); assert(vim.fn.isdirectory(tmp..'/folder')==1,'create folder')
-focus('folder'); press('<CR>')
+local folder_path=focus('folder').path
+vim.fn.maparg('l','n',false,true).callback(); assert(tree.expanded[folder_path],'l expands folder')
 vim.ui.input=function(_,cb) cb(tmp..'/folder/a b.txt') end
 press('a'); assert(vim.fn.filereadable(tmp..'/folder/a b.txt')==1,'create file with spaces')
 vim.cmd('bdelete')
 focus('a b.txt')
+vim.fn.maparg('h','n',false,true).callback(); assert(not tree.expanded[folder_path],'h collapses parent from child')
+focus('folder'); vim.fn.maparg('l','n',false,true).callback(); focus('a b.txt')
 vim.ui.input=function(_,cb) cb(tmp..'/folder/renamed.txt') end
 press('r'); assert(vim.fn.filereadable(tmp..'/folder/renamed.txt')==1,'rename file')
 focus('renamed.txt')

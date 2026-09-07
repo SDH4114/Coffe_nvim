@@ -4,14 +4,19 @@ Neovim 0.11+. Standalone: ./scripts/coffe. Config: coffe.lua.
 As a plugin: require('coffe').setup({...}). See examples/lazy.lua.
 
                                                              *:Coffe*
-:Coffe [action]     home, files, search, explorer, settings, new, projects, help
+:Coffe [action]     home, commands, files, recent, buffers, search, explorer,
+                    settings, new, projects, help
+:CoffeCommands      Search and run all Coffe actions
 :CoffeFiles         Find files
+:CoffeRecent        Recent files
+:CoffeBuffers       Search open buffers; Ctrl-X closes a saved buffer
 :CoffeSearch        Search project contents (ripgrep required)
 :CoffeExplorer      Toggle left/right sidebar
 :CoffeSettings      Open config_file
 :CoffeCreateProject Create a new directory; never overwrite an existing path
 :CoffeOpenProject [directory]  Open directory, keeping modified buffers
 :CoffeProjects      Recent projects
+:CoffePinProject    Pin or unpin the current project
 :CoffeKeys          Keyboard guide
 :checkhealth coffe  Requirements and clipboard diagnostics
 
@@ -19,17 +24,19 @@ Dashboard: large responsive COFFE logo and centered actions. Use j/k, arrows,
 Tab/Shift-Tab to select, Enter to run, or press the key shown on a button.
 
 Default leader in standalone mode: Space. Existing user maps take precedence.
-Space e: explorer. Space ff/fg: files/text. Space h: home. Space ,: settings.
+Space Space: commands. Space e: explorer. Space ff/fg/fr: files/text/recent.
+Space bb: buffers. Space h: home. Space ,: settings.
 Space y/p: copy/paste. u/Ctrl-R: undo/redo. F8: delete entire line, also in Insert.
 Cmd shortcuts need terminal support. See examples/ghostty.conf for Cmd-Backspace.
 Native Neovim commands and modes remain available.
 
 Settings: theme, background, dashboard, clipboard, undo, mouse, numbers,
-relative_numbers, indent, mappings, keys, explorer={side,width,hidden,auto_open},
+relative_numbers, indent, mappings, keys, ui={statusline}, explorer={side,width,hidden,auto_open},
 projects={root,recent_limit}, config_file. Standalone also accepts plugins (lazy specs).
 theme=false keeps the current theme; mappings=false disables Coffe keymaps.
 
-Neo-tree: ? for help. Offline tree: Enter open, a create, r rename,
-D delete with confirmation, . hidden, R refresh, q close. Only empty directories
+Neo-tree: ? for help. Offline tree: h/l collapse/expand, Enter/o open, s split,
+t tab, P preview, m mark, a create, r rename, D delete with confirmation,
+. hidden, R refresh, q close. Only empty directories
 and files can be deleted. Loaded files must be closed before rename/delete.
 Full installation, options and limitations: README.md.

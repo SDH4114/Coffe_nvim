@@ -1,0 +1,1563 @@
+
+SLIDE 1
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "4",
+      "name": "Title 3",
+      "position": {
+        "left": 65.757375328084,
+        "top": 47.20860892388452,
+        "width": 706.6062992125984,
+        "height": 252.12041994750658
+      },
+      "text": "Team onsite \nand planning",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "5",
+      "name": "Subtitle 4",
+      "position": {
+        "left": 67.47181102362205,
+        "top": 374.2717060367454,
+        "width": 394.5799475065617,
+        "height": 64.53291338582677
+      },
+      "text": "August Team Onsite \nSan Francisco",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "6",
+      "name": "Picture 2",
+      "frame": {
+        "left": 0,
+        "top": 500.09301837270345,
+        "width": 1279.8469291338583,
+        "height": 219.9069816272966
+      },
+      "crop": {
+        "left": 0,
+        "top": 0.25645,
+        "right": 0,
+        "bottom": 0.61469
+      },
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Team onsite \nand planning"
+    },
+    {
+      "name": "subtitle",
+      "type": "subtitle",
+      "text": "August Team Onsite \nSan Francisco"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "‹#›"
+    }
+  ]
+}
+
+SLIDE 3
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "534",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 535.6187926509186,
+        "width": 311.80955380577427,
+        "height": 68
+      },
+      "text": "Speaker Full Name\nSpeaker Title Role",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.116325459317586,
+        "width": 616,
+        "height": 281.21700787401574
+      },
+      "text": "Section divider slide with speakers",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "10",
+      "name": "Footer Placeholder 9",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "11",
+      "name": "Slide Number Placeholder 10",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "3",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "3",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 409.90477690288714,
+        "top": 535.6187926509186,
+        "width": 311.80955380577427,
+        "height": 68
+      },
+      "text": "Speaker Full Name\nSpeaker Title Role",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "535",
+      "name": "Picture 17",
+      "frame": {
+        "left": 773.8853543307087,
+        "top": 0,
+        "width": 505.96157480314963,
+        "height": 720
+      },
+      "crop": {
+        "left": 0.03152,
+        "top": 0,
+        "right": 0.03152,
+        "bottom": 0
+      },
+      "alt": ""
+    },
+    {
+      "i": 1,
+      "id": "536",
+      "name": "Picture 8",
+      "frame": {
+        "left": 43.986141732283464,
+        "top": 408.5565354330709,
+        "width": 93.55727034120736,
+        "height": 94.88913385826773
+      },
+      "crop": {
+        "left": 0,
+        "top": 0.74249,
+        "right": 0.80475,
+        "bottom": 0.15849
+      },
+      "alt": ""
+    },
+    {
+      "i": 2,
+      "id": "537",
+      "name": "Picture 3",
+      "frame": {
+        "left": 412.55758530183726,
+        "top": 408.5565354330709,
+        "width": 93.55727034120736,
+        "height": 94.88913385826773
+      },
+      "crop": {
+        "left": 0,
+        "top": 0.74249,
+        "right": 0.80475,
+        "bottom": 0.15849
+      },
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "google shape 534 p58",
+      "text": "Speaker Full Name\nSpeaker Title Role"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Section divider slide with speakers"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "3"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 5
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "534",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 146.0890288713911,
+        "width": 581.3333333333334,
+        "height": 483.2441994750656
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus. In hac habitasse platea dictumst. \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "5",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.11643044619423,
+        "width": 580.4998425196851,
+        "height": 73.21700787401575
+      },
+      "text": "Half text, half image slide",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "5",
+      "name": "Footer Placeholder 4",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "535",
+      "name": "Picture 3",
+      "frame": {
+        "left": 658.1669291338583,
+        "top": 41.617742782152234,
+        "width": 581.6,
+        "height": 588.1438320209974
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29168,
+        "right": 0,
+        "bottom": 0.23013
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "google shape 534 p58",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus. In hac habitasse platea dictumst. \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus."
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "5"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Half text, half image slide"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 6
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "534",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 172,
+        "width": 374.6666666666667,
+        "height": 457.33322834645674
+      },
+      "text": "Title here\nProin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus. In hac habitasse platea dictumst. \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "6",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.116325459317586,
+        "width": 374.6666666666667,
+        "height": 94.55034120734908
+      },
+      "text": "One column layout with image",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "2",
+      "name": "object 3",
+      "geometry": 188,
+      "position": {
+        "left": 452,
+        "top": 40.72398950131234,
+        "width": 787.3239895013123,
+        "height": 588.6
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "4",
+      "name": "Footer Placeholder 3",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "535",
+      "name": "Picture 2",
+      "frame": {
+        "left": 452,
+        "top": 41.617742782152234,
+        "width": 787.7669291338583,
+        "height": 588.1438320209974
+      },
+      "crop": {
+        "left": 0,
+        "top": 0.44704,
+        "right": 0,
+        "bottom": 0.17965
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "google shape 534 p58",
+      "text": "Title here\nProin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus. In hac habitasse platea dictumst. \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus."
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "6"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "One column layout with image"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 9
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "9",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.11643044619423,
+        "width": 822.6666666666667,
+        "height": 61.058687664042
+      },
+      "text": "Intro and data table",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "14",
+      "name": "Content Placeholder 15",
+      "geometry": 5,
+      "position": {
+        "left": 42.093333333333334,
+        "top": 111.02372703412074,
+        "width": 1197.3332283464567,
+        "height": 106.2729658792651
+      },
+      "text": "Topic\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. Proin mattis nibh risus. Nulla tempor ut massa elementum dapibus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "3",
+      "name": "Footer Placeholder 2",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "9"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Intro and data table"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 13
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "13",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.116325459317586,
+        "width": 822.6666666666667,
+        "height": 109.97280839895014
+      },
+      "text": "Intro with four topics",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "12",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 732,
+        "top": 249.33343832020998,
+        "width": 506.6666666666667,
+        "height": 68
+      },
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "15",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 509.33333333333337,
+        "top": 249.33343832020998,
+        "width": 196,
+        "height": 68
+      },
+      "text": "Item or topic \ntitle goes here",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "16",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 732,
+        "top": 353.33343832021,
+        "width": 506.6666666666667,
+        "height": 68
+      },
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 5,
+      "id": "17",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 509.33333333333337,
+        "top": 353.33343832021,
+        "width": 196,
+        "height": 68
+      },
+      "text": "Item or topic \ntitle goes here",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 6,
+      "id": "18",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 732,
+        "top": 457.33343832021,
+        "width": 506.6666666666667,
+        "height": 68
+      },
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 7,
+      "id": "19",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 509.33333333333337,
+        "top": 457.33343832021,
+        "width": 196,
+        "height": 68
+      },
+      "text": "Item or topic \ntitle goes here",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 8,
+      "id": "20",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 732,
+        "top": 562.6667716535434,
+        "width": 506.6666666666667,
+        "height": 68
+      },
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 9,
+      "id": "21",
+      "name": "Content Placeholder 10",
+      "geometry": 5,
+      "position": {
+        "left": 509.33333333333337,
+        "top": 562.6667716535434,
+        "width": 196,
+        "height": 68
+      },
+      "text": "Item or topic \ntitle goes here",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 10,
+      "id": "3",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 249.33343832020998,
+        "width": 374.6666666666667,
+        "height": 379.99989501312336
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst. \nQuam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea dictumst.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 11,
+      "id": "2",
+      "name": "Footer Placeholder 1",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "13"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Intro with four topics"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 17
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "534",
+      "name": "Google Shape;534;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "17",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "2",
+      "name": "Content Placeholder 1",
+      "position": {
+        "left": 453.33333333333337,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "3",
+      "name": "Content Placeholder 2",
+      "position": {
+        "left": 864.2806299212599,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. \n",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.11643044619423,
+        "width": 1197.3333333333335,
+        "height": 73.21700787401575
+      },
+      "text": "Three column layout with images",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 5,
+      "id": "14",
+      "name": "Footer Placeholder 13",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "535",
+      "name": "Picture 10",
+      "frame": {
+        "left": 41.333333333333336,
+        "top": 145.3332283464567,
+        "width": 375.71937007874016,
+        "height": 243.99989501312336
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29168,
+        "right": 0.33478,
+        "bottom": 0.50994
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    },
+    {
+      "i": 1,
+      "id": "536",
+      "name": "Picture 11",
+      "frame": {
+        "left": 451.8597375328084,
+        "top": 145.3332283464567,
+        "width": 375.71937007874016,
+        "height": 243.99989501312336
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29168,
+        "right": 0.33478,
+        "bottom": 0.50994
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    },
+    {
+      "i": 2,
+      "id": "537",
+      "name": "Picture 12",
+      "frame": {
+        "left": 864.9123359580053,
+        "top": 145.3332283464567,
+        "width": 375.71937007874016,
+        "height": 243.99989501312336
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29168,
+        "right": 0.33478,
+        "bottom": 0.50994
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "google shape 534 p58",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. "
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "17"
+    },
+    {
+      "name": "content placeholder 1",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. "
+    },
+    {
+      "name": "content placeholder 2",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. Nullam pharetra mauris tortor. In hac habitasse platea. \n"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Three column layout with images"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 18
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "16",
+      "name": "Content Placeholder 15",
+      "position": {
+        "left": 41.333333333333336,
+        "top": 519.4666666666667,
+        "width": 272.5390026246719,
+        "height": 109.86666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "4",
+      "name": "Slide Number Placeholder 3",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "18",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "11",
+      "name": "Title 10",
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.116325459317586,
+        "width": 822.6666666666667,
+        "height": 63.14761154855643
+      },
+      "text": "Four column layout with images",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "17",
+      "name": "Text Placeholder 16",
+      "position": {
+        "left": 349.6319160104987,
+        "top": 519.4666666666667,
+        "width": 273.034750656168,
+        "height": 109.86666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "18",
+      "name": "Content Placeholder 17",
+      "position": {
+        "left": 657.6811548556431,
+        "top": 519.4666666666667,
+        "width": 272.5390026246719,
+        "height": 109.86666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 5,
+      "id": "19",
+      "name": "Text Placeholder 18",
+      "position": {
+        "left": 965.9797375328085,
+        "top": 519.4666666666667,
+        "width": 273.034750656168,
+        "height": 109.86666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 6,
+      "id": "24",
+      "name": "Footer Placeholder 23",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "25",
+      "name": "Picture 12",
+      "frame": {
+        "left": 41.333333333333336,
+        "top": 145.33333333333334,
+        "width": 271.0734908136483,
+        "height": 348
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29169,
+        "right": 0.50494,
+        "bottom": 0.42537
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    },
+    {
+      "i": 1,
+      "id": "26",
+      "name": "Picture 20",
+      "frame": {
+        "left": 351.8333858267717,
+        "top": 145.33333333333334,
+        "width": 271.0734908136483,
+        "height": 348
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29169,
+        "right": 0.50494,
+        "bottom": 0.42537
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    },
+    {
+      "i": 2,
+      "id": "27",
+      "name": "Picture 21",
+      "frame": {
+        "left": 657.833280839895,
+        "top": 145.33333333333334,
+        "width": 271.0734908136483,
+        "height": 348
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29169,
+        "right": 0.50494,
+        "bottom": 0.42537
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    },
+    {
+      "i": 3,
+      "id": "28",
+      "name": "Picture 22",
+      "frame": {
+        "left": 968.3333333333334,
+        "top": 145.33333333333334,
+        "width": 271.0734908136483,
+        "height": 348
+      },
+      "crop": {
+        "left": 0.05428,
+        "top": 0.29169,
+        "right": 0.50494,
+        "bottom": 0.42537
+      },
+      "geometry": "roundRect",
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "content placeholder 15",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "18"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Four column layout with images"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "content placeholder 17",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 23
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "558",
+      "name": "Google Shape;558;p61",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. ",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "556",
+      "name": "Google Shape;556;p61",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "23",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "559",
+      "name": "Google Shape;559;p61",
+      "geometry": 5,
+      "position": {
+        "left": 453.33333333333337,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "560",
+      "name": "Google Shape;560;p61",
+      "geometry": 5,
+      "position": {
+        "left": 864.2806299212599,
+        "top": 421.33333333333337,
+        "width": 374.6666666666667,
+        "height": 208
+      },
+      "text": "Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "557",
+      "name": "Google Shape;557;p61",
+      "geometry": 5,
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "Three column layout with icons",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 5,
+      "id": "561",
+      "name": "Google Shape;561;p61",
+      "geometry": 188,
+      "position": {
+        "left": 449.3337532808399,
+        "top": 355.09742782152233,
+        "width": 33.13175853018373,
+        "height": 37.15202099737533
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 6,
+      "id": "562",
+      "name": "Google Shape;562;p61",
+      "geometry": 188,
+      "position": {
+        "left": 42.141522309711284,
+        "top": 354.6679265091864,
+        "width": 34.33889763779528,
+        "height": 38.013018372703414
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 7,
+      "id": "563",
+      "name": "Google Shape;563;p61",
+      "geometry": 188,
+      "position": {
+        "left": 864.209658792651,
+        "top": 357.6744356955381,
+        "width": 35.54645669291339,
+        "height": 28.442834645669294
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 8,
+      "id": "2",
+      "name": "Footer Placeholder 1",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "name": "google shape 558 p61",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam ut massa luctus cursus. "
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "23"
+    },
+    {
+      "name": "google shape 559 p61",
+      "text": "Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus."
+    },
+    {
+      "name": "google shape 560 p61",
+      "text": "Nulla tempor ut massa elementum dapibus. Nam non ante quis enim fringilla tempus nec in lectus."
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Three column layout with icons"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}
+
+SLIDE 24
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "4",
+      "name": "Title 3",
+      "position": {
+        "left": 65.757375328084,
+        "top": 47.20860892388452,
+        "width": 706.6062992125984,
+        "height": 252.12041994750658
+      },
+      "text": "Thank you",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "5",
+      "name": "Subtitle 4",
+      "position": {
+        "left": 67.47181102362205,
+        "top": 374.2717060367454,
+        "width": 394.5799475065617,
+        "height": 64.53291338582677
+      },
+      "text": "August Team Onsite \nSan Francisco",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "2",
+      "name": "TextBox 1",
+      "geometry": 5,
+      "position": {
+        "left": 718.3447769028871,
+        "top": -549.5172703412073,
+        "width": 19.394330708661418,
+        "height": 38.77501312335958
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "6",
+      "name": "TextBox 5",
+      "geometry": 5,
+      "position": {
+        "left": -268.13795275590553,
+        "top": -324.4137532808399,
+        "width": 19.394330708661418,
+        "height": 38.77501312335958
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [
+    {
+      "i": 0,
+      "id": "7",
+      "name": "Picture 7",
+      "frame": {
+        "left": 0,
+        "top": 500.09301837270345,
+        "width": 1280,
+        "height": 219.9069816272966
+      },
+      "crop": {
+        "left": 0,
+        "top": 0.25645,
+        "right": 0,
+        "bottom": 0.61469
+      },
+      "alt": ""
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Thank you"
+    },
+    {
+      "name": "subtitle",
+      "type": "subtitle",
+      "text": "August Team Onsite \nSan Francisco"
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "‹#›"
+    }
+  ]
+}

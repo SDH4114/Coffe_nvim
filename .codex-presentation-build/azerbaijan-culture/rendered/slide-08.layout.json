@@ -1,0 +1,1205 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/14bup87q",
+    "id": "14bup87q",
+    "slide": 8,
+    "layoutId": "/ppt/slideLayouts/slideLayout4.xml",
+    "layoutName": "Three Content",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Color Block Theme",
+    "colors": {
+      "accent1": "#2ED978",
+      "accent2": "#9FB6FE",
+      "accent3": "#F3F161",
+      "accent4": "#FF5F27",
+      "accent5": "#5EC4FF",
+      "accent6": "#3C7DA3",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#393939",
+      "lt2": "#F5F5F5",
+      "hlink": "#FFA83A",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Inter",
+      "majorFont": {
+        "latinTypeface": "Inter"
+      },
+      "minorFont": {
+        "latinTypeface": "Inter"
+      }
+    },
+    "typefaces": [
+      "Inter"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout4.xml",
+      "name": "Three Content",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/11",
+          "id": "11",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            41.33,
+            213.33,
+            374.67,
+            416
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/12",
+          "id": "12",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            41.33,
+            659.31,
+            374.67,
+            25.33
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/13",
+          "id": "13",
+          "name": "Slide Number Placeholder 5",
+          "bbox": [
+            1184.18,
+            659.24,
+            54.48,
+            25.33
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/14",
+          "id": "14",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            453.33,
+            213.33,
+            374.67,
+            416
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/15",
+          "id": "15",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            864.28,
+            213.33,
+            374.67,
+            416
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            41.33,
+            36.12,
+            1197.33,
+            109.97
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            41.33,
+            36.12,
+            1197.33,
+            109.97
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            41.33,
+            213.33,
+            1197.33,
+            416
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master text styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master text styles",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master text styles"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            41.33,
+            659.31,
+            374.67,
+            25.33
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 5",
+          "bbox": [
+            1184.18,
+            659.24,
+            54.48,
+            25.33
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fupszado",
+      "id": "534",
+      "name": "Google Shape;534;p58",
+      "bbox": [
+        41.33,
+        421.33,
+        374.67,
+        208
+      ],
+      "geometry": "rect",
+      "text": "Yallı\nİştirakçılar dairə, zəncir və ya sıra şəklində birlikdə hərəkət edirlər. Naxçıvanın yallı ənənəsi 2018-ci ildən UNESCO-nun Təcili Qorunmaya Ehtiyacı Olan İrs Siyahısındadır.",
+      "textPreview": "Yallı | İştirakçılar dairə, zəncir və ya sıra şəklində birlikdə hərəkət edirlər. Naxçıvanın yallı ənənəsi 2018-ci ildən UNESCO-nun Təcili...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Inter",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 7,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": "•Yallı"
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": "•İştirakçılar dairə, zəncir və ya sıra şəklində"
+          },
+          {
+            "index": 5,
+            "text": "birlikdə hərəkət edirlər. Naxçıvanın yallı ənənəsi"
+          },
+          {
+            "index": 6,
+            "text": "2018-ci ildən UNESCO-nun Təcili Qorunmaya"
+          },
+          {
+            "index": 7,
+            "text": "Ehtiyacı Olan İrs Siyahısındadır."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Yallı",
+          "spaceAfter": 900,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "useParagraphSpacing": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Yallı",
+              "fontSize": 22.67,
+              "typeface": "Inter",
+              "color": "#0B4158",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        },
+        {
+          "index": 2,
+          "text": "İştirakçılar dairə, zəncir və ya sıra şəklində birlikdə hərəkət edirlər. Naxçıvanın yallı ənənəsi 2018-ci ildən UNESCO-nun Təcili Qorunmaya Ehtiyacı Olan İrs Siyahısındadır.",
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "useParagraphSpacing": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "İştirakçılar dairə, zəncir və ya sıra şəklində birlikdə hərəkət edirlər. Naxçıvanın yallı ənənəsi 2018-ci ildən UNESCO-nun Təcili Qorunmaya Ehtiyacı Olan İrs Siyahısındadır.",
+              "fontSize": 16.27,
+              "typeface": "Inter",
+              "color": "#273E48"
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0ra5kvq",
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "geometry": "rect",
+      "text": "8",
+      "textPreview": "8",
+      "resolvedFontSize": 14.67,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 14.67,
+        "typeface": "Inter",
+        "color": "tx1",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "8"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "8",
+          "runs": [
+            {
+              "index": 1,
+              "text": "8"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1c7e50ni",
+      "id": "2",
+      "name": "Content Placeholder 1",
+      "bbox": [
+        453.33,
+        421.33,
+        374.67,
+        208
+      ],
+      "text": "Tar\nUzunqollu simli alət muğamın əsas səs dayaqlarındandır. Azərbaycanda tarın hazırlanması və ifa sənəti 2012-ci ildə UNESCO siyahısına daxil edilib.",
+      "textPreview": "Tar | Uzunqollu simli alət muğamın əsas səs dayaqlarındandır. Azərbaycanda tarın hazırlanması və ifa sənəti 2012-ci ildə UNESCO siyahısın...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Inter",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "autoFitLineSpaceReduction": 10000,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•Tar"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "•Uzunqollu simli alət muğamın əsas səs"
+          },
+          {
+            "index": 4,
+            "text": "dayaqlarındandır. Azərbaycanda tarın"
+          },
+          {
+            "index": 5,
+            "text": "hazırlanması və ifa sənəti 2012-ci ildə UNESCO"
+          },
+          {
+            "index": 6,
+            "text": "siyahısına daxil edilib."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tar",
+          "spaceAfter": 900,
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText",
+            "autoFitLineSpaceReduction": 10000
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tar",
+              "fontSize": 22.67,
+              "typeface": "Inter",
+              "color": "#0B4158",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        },
+        {
+          "index": 2,
+          "text": "Uzunqollu simli alət muğamın əsas səs dayaqlarındandır. Azərbaycanda tarın hazırlanması və ifa sənəti 2012-ci ildə UNESCO siyahısına daxil edilib.",
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText",
+            "autoFitLineSpaceReduction": 10000
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Uzunqollu simli alət muğamın əsas səs dayaqlarındandır. Azərbaycanda tarın hazırlanması və ifa sənəti 2012-ci ildə UNESCO siyahısına daxil edilib.",
+              "fontSize": 16.27,
+              "typeface": "Inter",
+              "color": "#273E48"
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbedwfmx",
+      "id": "3",
+      "name": "Content Placeholder 2",
+      "bbox": [
+        864.28,
+        154,
+        374.67,
+        475
+      ],
+      "text": "4 simli\nKamança\nYayla ifa olunan kamança klassik və folklor musiqisində mühüm yer tutur. Azərbaycan və İran bu sənəti 2017-ci ildə UNESCO siyahısına birgə təqdim edib.",
+      "textPreview": "4 simli | Kamança | Yayla ifa olunan kamança klassik və folklor musiqisində mühüm yer tutur. Azərbaycan və İran bu sənəti 2017-ci ildə UN...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Inter",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "autoFitLineSpaceReduction": 10000,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 8,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•4 simli"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "•Kamança"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "•Yayla ifa olunan kamança klassik və folklor"
+          },
+          {
+            "index": 6,
+            "text": "musiqisində mühüm yer tutur. Azərbaycan və"
+          },
+          {
+            "index": 7,
+            "text": "İran bu sənəti 2017-ci ildə UNESCO"
+          },
+          {
+            "index": 8,
+            "text": "siyahısına birgə təqdim edib."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4 simli",
+          "spaceAfter": 1000,
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText",
+            "autoFitScale": 1,
+            "autoFitLineSpaceReduction": 10000
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4 simli",
+              "fontSize": 40,
+              "typeface": "Inter",
+              "color": "#179FE3",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        },
+        {
+          "index": 2,
+          "text": "Kamança",
+          "spaceAfter": 900,
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText",
+            "autoFitScale": 1,
+            "autoFitLineSpaceReduction": 10000
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Kamança",
+              "fontSize": 24,
+              "typeface": "Inter",
+              "color": "#0B4158",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        },
+        {
+          "index": 3,
+          "text": "Yayla ifa olunan kamança klassik və folklor musiqisində mühüm yer tutur. Azərbaycan və İran bu sənəti 2017-ci ildə UNESCO siyahısına birgə təqdim edib.",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText",
+            "autoFitScale": 1,
+            "autoFitLineSpaceReduction": 10000
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Yayla ifa olunan kamança klassik və folklor musiqisində mühüm yer tutur. Azərbaycan və İran bu sənəti 2017-ci ildə UNESCO siyahısına birgə təqdim edib.",
+              "fontSize": 17.33,
+              "typeface": "Inter",
+              "color": "#273E48"
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ozitwfu5",
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        73.22
+      ],
+      "geometry": "rect",
+      "text": "Xalq rəqsləri və musiqi alətləri",
+      "textPreview": "Xalq rəqsləri və musiqi alətləri",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 38.67,
+        "typeface": "Inter",
+        "color": "#0B4158",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Xalq rəqsləri və musiqi alətləri"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Xalq rəqsləri və musiqi alətləri",
+          "resolvedTextStyle": {
+            "typeface": "Inter",
+            "color": "#0B4158",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Xalq rəqsləri və musiqi alətləri",
+              "typeface": "Inter",
+              "color": "#0B4158",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gnepkr69",
+      "id": "14",
+      "name": "Footer Placeholder 13",
+      "bbox": [
+        41.33,
+        659.31,
+        374.67,
+        25.33
+      ],
+      "resolvedFontSize": 14.67,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "vertical": 1,
+        "fontSize": 14.67,
+        "typeface": "Inter",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "bottom",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/ixonap0v",
+      "id": "538",
+      "bbox": [
+        41.33,
+        145.33,
+        375.72,
+        244
+      ],
+      "geometry": "roundRect",
+      "alt": "Azərbaycan xalq rəqsi ifaçıları",
+      "contentType": "image/png",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect"
+      },
+      "asset": {
+        "assetId": "27503c94-1d6f-4609-a9ce-0211ffe8c95f",
+        "contentType": "image/png",
+        "byteLength": 131648
+      }
+    },
+    {
+      "order": 8,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/jyxo3uhg",
+      "id": "539",
+      "bbox": [
+        451.86,
+        145.33,
+        375.72,
+        244
+      ],
+      "geometry": "roundRect",
+      "alt": "Tar, kamança, qaval və nağara kimi Azərbaycan musiqi alətləri",
+      "contentType": "image/png",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect"
+      },
+      "asset": {
+        "assetId": "42faa83f-65ad-43ee-9972-248349958b23",
+        "contentType": "image/png",
+        "byteLength": 1040639
+      }
+    }
+  ],
+  "composeRuns": []
+}

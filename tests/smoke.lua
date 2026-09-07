@@ -30,7 +30,9 @@ tree.open()
 check(vim.api.nvim_win_is_valid(tree.win),'tree opens')
 check(vim.api.nvim_get_current_win()==tree.win,'tree receives focus')
 check(vim.api.nvim_win_get_position(tree.win)[2]==0,'tree on left')
-local first_entry = tree.entries[9]
+local first_row
+for row in pairs(tree.entries) do if not first_row or row < first_row then first_row = row end end
+local first_entry = tree.entries[first_row]
 check(first_entry and first_entry.name == 'folder','directories first')
 vim.api.nvim_set_current_win(tree.win)
 local fileline

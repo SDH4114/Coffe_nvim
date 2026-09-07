@@ -53,6 +53,8 @@ Coffe_nvim/
 │   ├── projects.lua         # создание, открытие и история проектов
 │   ├── explorer.lua         # встроенная файловая панель без зависимостей
 │   ├── picker.lua           # встроенный поиск файлов, текста и выбор элементов
+│   ├── ui.lua               # общий слой floating-окон, рамок и preview
+│   ├── statusline.lua       # встроенная statusline для offline-режима
 │   ├── bootstrap.lua        # установка и запуск lazy.nvim только для сборки
 │   ├── plugins.lua          # стандартный набор lazy.nvim plugin specs
 │   ├── health.lua           # :checkhealth coffe
@@ -106,6 +108,8 @@ lazy.nvim specs в поле `plugins` файла `coffe.lua`.
 - Не изменять `~/.config/nvim`, shell rc-файлы или пользовательские данные при запуске.
 - Состояние самостоятельной сборки хранится отдельно благодаря `NVIM_APPNAME=coffe`.
 - `COFFE_OFFLINE=1` запрещает bootstrap lazy.nvim; ядро при этом должно запускаться.
+- Dashboard, picker, help и preview используют общий `coffe.ui`; picker сразу готов к вводу.
+- Встроенная statusline включается только если пользовательская statusline ещё не задана.
 
 ## Изменение конфигурации
 

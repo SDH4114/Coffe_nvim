@@ -4,10 +4,12 @@ M.defaults = {
   explorer = { side = 'left', width = 32, hidden = false, auto_open = false },
   numbers = true, relative_numbers = false, indent = 2, mouse = true,
   clipboard = true, undo = true, mappings = true,
+  ui = { statusline = true },
   projects = { root = '~/Projects', recent_limit = 20 },
   config_file = vim.fn.stdpath('config') .. '/init.lua',
   keys = {
-    dashboard = '<leader>h', explorer = '<leader>e', files = '<leader>ff', search = '<leader>fg',
+    dashboard = '<leader>h', palette = '<leader><space>', explorer = '<leader>e', files = '<leader>ff', search = '<leader>fg',
+    recent = '<leader>fr', buffers = '<leader>bb',
     settings = '<leader>,', copy = '<leader>y', paste = '<leader>p', undo = '<leader>u', redo = '<leader>U',
     delete_word = '<M-BS>', delete_line = '<D-BS>',
   },

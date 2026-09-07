@@ -25,6 +25,37 @@ function M.search()
   if ok then return telescope.live_grep() end
   return require("coffe.picker").grep()
 end
+function M.recent()
+  local ok, telescope = pcall(require, "telescope.builtin")
+  if ok then return telescope.oldfiles() end
+  return require("coffe.picker").recent()
+end
+function M.buffers()
+  local ok, telescope = pcall(require, "telescope.builtin")
+  if ok then return telescope.buffers({ sort_mru = true, ignore_current_buffer = false }) end
+  return require("coffe.picker").buffers()
+end
+function M.palette()
+  local projects = require("coffe.projects")
+  local items = {
+    { label = "Files · Find files", run = M.files },
+    { label = "Files · Search project text", run = M.search },
+    { label = "Files · Recent files", run = M.recent },
+    { label = "Workspace · Switch buffer", run = M.buffers },
+    { label = "Workspace · Toggle explorer", run = M.explorer },
+    { label = "Workspace · Dashboard", run = function() require("coffe.dashboard").open() end },
+    { label = "Projects · Create project", run = projects.create },
+    { label = "Projects · Open folder", run = projects.prompt_open },
+    { label = "Projects · Recent and pinned", run = projects.pick },
+    { label = "Coffe · Open settings", run = M.settings },
+    { label = "Coffe · Keyboard guide", run = function() vim.cmd.CoffeKeys() end },
+    { label = "Editor · Save file", run = function() vim.cmd.write() end },
+  }
+  require("coffe.picker").open("Commands", items, function(item) item.run() end, {
+    empty = "  No commands found",
+    footer = "type command · Enter run · Esc close",
+  })
+end
 function M.delete_line()
   if not vim.bo.modifiable or vim.bo.readonly then return end
   local row = vim.api.nvim_win_get_cursor(0)[1]

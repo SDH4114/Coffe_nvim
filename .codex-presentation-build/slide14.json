@@ -1,0 +1,257 @@
+
+SLIDE 14
+{
+  "shapes": [
+    {
+      "i": 0,
+      "id": "16",
+      "name": "Content Placeholder 15",
+      "position": {
+        "left": 41.333333333333336,
+        "top": 401.33333333333337,
+        "width": 272.5390026246719,
+        "height": 122.66666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 1,
+      "id": "4",
+      "name": "Slide Number Placeholder 3",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "14",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 2,
+      "id": "11",
+      "name": "Title 10",
+      "position": {
+        "left": 41.333333333333336,
+        "top": 36.116325459317586,
+        "width": 823.8150131233596,
+        "height": 108.65018372703412
+      },
+      "text": "Timeline with three text only milestones",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 3,
+      "id": "17",
+      "name": "Text Placeholder 16",
+      "position": {
+        "left": 453.24083989501315,
+        "top": 401.33333333333337,
+        "width": 272.5390026246719,
+        "height": 122.66666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 4,
+      "id": "18",
+      "name": "Content Placeholder 17",
+      "position": {
+        "left": 865.1483464566929,
+        "top": 401.33333333333337,
+        "width": 272.5390026246719,
+        "height": 122.66666666666667
+      },
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam.",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 5,
+      "id": "2",
+      "name": "Google Shape;2259;p159",
+      "geometry": 96,
+      "position": {
+        "left": 35.45595800524934,
+        "top": 354.1997900262467,
+        "width": 1285.6062992125985,
+        "height": 0.031496062992125984
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 6,
+      "id": "3",
+      "name": "Google Shape;2260;p159",
+      "geometry": 35,
+      "position": {
+        "left": 35.45595800524934,
+        "top": 348.57774278215226,
+        "width": 11.244094488188976,
+        "height": 11.244094488188976
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 7,
+      "id": "5",
+      "name": "Google Shape;2261;p159",
+      "geometry": 35,
+      "position": {
+        "left": 446.37795275590554,
+        "top": 348.57774278215226,
+        "width": 11.244094488188976,
+        "height": 11.244094488188976
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 8,
+      "id": "6",
+      "name": "Google Shape;2262;p159",
+      "geometry": 35,
+      "position": {
+        "left": 858.3779527559055,
+        "top": 348.57774278215226,
+        "width": 11.244094488188976,
+        "height": 11.244094488188976
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 9,
+      "id": "9",
+      "name": "Content Placeholder 15",
+      "geometry": 5,
+      "position": {
+        "left": 41.333333333333336,
+        "top": 298.5056167979003,
+        "width": 169.33333333333334,
+        "height": 27.548556430446194
+      },
+      "text": "Date",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 10,
+      "id": "13",
+      "name": "Content Placeholder 15",
+      "geometry": 5,
+      "position": {
+        "left": 450.83328083989505,
+        "top": 298.5056167979003,
+        "width": 169.33333333333334,
+        "height": 27.548556430446194
+      },
+      "text": "Date",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 11,
+      "id": "14",
+      "name": "Content Placeholder 15",
+      "geometry": 5,
+      "position": {
+        "left": 863.3332283464567,
+        "top": 298.5056167979003,
+        "width": 169.33333333333334,
+        "height": 27.548556430446194
+      },
+      "text": "Date",
+      "style": null,
+      "fill": {},
+      "line": {}
+    },
+    {
+      "i": 12,
+      "id": "7",
+      "name": "Footer Placeholder 6",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "text": "",
+      "style": null,
+      "fill": {},
+      "line": {}
+    }
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "name": "content placeholder 15",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam."
+    },
+    {
+      "name": "slideNumber",
+      "type": "slideNumber",
+      "text": "14"
+    },
+    {
+      "name": "title",
+      "type": "title",
+      "text": "Timeline with three text only milestones"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam."
+    },
+    {
+      "name": "content placeholder 17",
+      "text": "Title here\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies quam."
+    },
+    {
+      "name": "footer",
+      "type": "footer",
+      "text": ""
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master"
+    },
+    {
+      "name": "text placeholder 2",
+      "text": "Click to edit Master"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master"
+    },
+    {
+      "name": "body",
+      "type": "body",
+      "text": "Click to edit Master text styles\nSecond level\nThird level\nFourth level\nFifth level"
+    }
+  ]
+}

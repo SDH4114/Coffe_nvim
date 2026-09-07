@@ -10,6 +10,7 @@ return {
       -- Your existing plugin manager and language tooling stay in charge.
       theme = "gruvbox",
       explorer = { side = "left", width = 32 },
+      ui = { statusline = false }, -- keep your existing statusline
       config_file = vim.fn.stdpath("config") .. "/lua/plugins/coffe.lua",
     },
     config = function(_, opts) require("coffe").setup(opts) end,
