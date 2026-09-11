@@ -6,10 +6,14 @@ M.defaults = {
   clipboard = true, undo = true, mappings = true,
   ui = { statusline = true },
   projects = { root = '~/Projects', recent_limit = 20 },
+  markdown = { wrap = true, outline_key = '<leader>mo', checkbox_key = '<leader>mx', follow_key = '<leader>mf' },
+  notes = { path = '~/Documents/Coffe/inbox.md' },
+  sessions = { enabled = true, auto_restore = true },
   config_file = vim.fn.stdpath('config') .. '/init.lua',
   keys = {
     dashboard = '<leader>h', palette = '<leader><space>', explorer = '<leader>e', files = '<leader>ff', search = '<leader>fg',
     recent = '<leader>fr', buffers = '<leader>bb',
+    note = '<leader>mn', git = '<leader>gs', diff = '<leader>gd',
     settings = '<leader>,', copy = '<leader>y', paste = '<leader>p', undo = '<leader>u', redo = '<leader>U',
     delete_word = '<M-BS>', delete_line = '<D-BS>',
   },
@@ -32,6 +36,7 @@ function M.setup(opts)
   assert(type(o.explorer.width) == 'number' and o.explorer.width >= 15, 'Coffe: explorer.width must be >= 15')
   assert(type(o.indent) == 'number' and o.indent >= 1, 'Coffe: indent must be positive')
   assert(type(o.projects.recent_limit) == 'number' and o.projects.recent_limit >= 1, 'Coffe: recent_limit must be positive')
+  assert(type(o.notes.path) == 'string' and o.notes.path ~= '', 'Coffe: notes.path must be a non-empty path')
   return o
 end
 return M

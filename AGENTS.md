@@ -48,7 +48,7 @@ Coffe_nvim/
 ├── lua/coffe/
 │   ├── init.lua             # публичный setup, опции, keymaps и autocmd
 │   ├── config.lua           # значения по умолчанию, merge и валидация настроек
-│   ├── commands.lua         # :Coffe и вспомогательные пользовательские команды
+│   ├── commands.lua         # :Cf и пользовательские команды с префиксом Cf
 │   ├── actions.lua          # маршрутизация действий к внешним или встроенным UI
 │   ├── dashboard.lua        # стартовый экран Coffe
 │   ├── projects.lua         # создание, открытие и история проектов
@@ -56,6 +56,10 @@ Coffe_nvim/
 │   ├── picker.lua           # встроенный поиск файлов, текста и выбор элементов
 │   ├── ui.lua               # общий слой floating-окон, рамок и preview
 │   ├── statusline.lua       # встроенная statusline для offline-режима
+│   ├── markdown.lua         # outline, checkbox и локальные Markdown-ссылки
+│   ├── notes.lua            # быстрые заметки в настраиваемый inbox.md
+│   ├── sessions.lua         # автоматические безопасные сессии проектов
+│   ├── git.lua              # dependency-free Git status и diff
 │   ├── bootstrap.lua        # установка и запуск lazy.nvim только для сборки
 │   ├── plugins.lua          # стандартный набор lazy.nvim plugin specs
 │   ├── health.lua           # :checkhealth coffe
@@ -73,6 +77,7 @@ Coffe_nvim/
     ├── core.lua             # ядро, команды, undo и безопасность проектов
     ├── smoke.lua            # пользовательские сценарии и совместимость keymaps
     ├── workflows.lua        # реальные операции explorer и поиска
+    ├── features.lua         # Markdown, notes, sessions, Git и команды Cf
     └── plugins.lua          # проверка настоящих внешних плагинов
 ```
 
@@ -115,6 +120,8 @@ lazy.nvim specs в поле `plugins` файла `coffe.lua`.
 - `COFFE_OFFLINE=1` запрещает bootstrap lazy.nvim; ядро при этом должно запускаться.
 - Dashboard, picker, help и preview используют общий `coffe.ui`; picker сразу готов к вводу.
 - Встроенная statusline включается только если пользовательская statusline ещё не задана.
+- Все пользовательские команды Coffe используют префикс `Cf`; сессии работают автоматически.
+- Git status и diff поддерживают пути с пробелами и используют массивы аргументов.
 
 ## Изменение конфигурации
 

@@ -6,21 +6,26 @@ Run: ~/.local/bin/coffe. Installed config: ~/.config/coffe/coffe.lua.
 Repository checkout: ./scripts/coffe with config in ./coffe.lua.
 As a plugin: require('coffe').setup({...}). See examples/lazy.lua.
 
-                                                             *:Coffe*
-:Coffe [action]     home, commands, files, recent, buffers, search, explorer,
-                    settings, new, projects, help
-:CoffeCommands      Search and run all Coffe actions
-:CoffeFiles         Find files
-:CoffeRecent        Recent files
-:CoffeBuffers       Search open buffers; Ctrl-X closes a saved buffer
-:CoffeSearch        Search project contents (ripgrep required)
-:CoffeExplorer      Toggle left/right sidebar
-:CoffeSettings      Open config_file
-:CoffeCreateProject Create a new directory; never overwrite an existing path
-:CoffeOpenProject [directory]  Open directory, keeping modified buffers
-:CoffeProjects      Recent projects
-:CoffePinProject    Pin or unpin the current project
-:CoffeKeys          Keyboard guide
+                                                                *:Cf*
+:Cf [action]        home, commands, files, recent, buffers, search, explorer,
+                    settings, new, projects, note, markdown, git, diff, diffall, help
+:CfCommands         Search and run all Coffe actions
+:CfFiles            Find files
+:CfRecent           Recent files
+:CfBuffers          Search open buffers; Ctrl-X closes a saved buffer
+:CfSearch           Search project contents (ripgrep required)
+:CfExplorer         Toggle left/right sidebar
+:CfSettings         Open config_file
+:CfCreateProject    Create a new directory; never overwrite an existing path
+:CfOpenProject [directory]  Open directory, keeping modified buffers
+:CfProjects         Recent projects
+:CfPinProject       Pin or unpin the current project
+:CfNote             Append a timestamped quick note to notes.path
+:CfMarkdown         Open the current Markdown outline
+:CfGit              Show staged, unstaged, renamed, and untracked files
+:CfDiff             Show staged and unstaged diff for the current file
+:CfDiffAll          Show staged and unstaged repository diff
+:CfKeys             Keyboard guide
 :checkhealth coffe  Requirements and clipboard diagnostics
 
 Dashboard: large responsive COFFE logo and centered actions. Use j/k, arrows,
@@ -29,6 +34,8 @@ Tab/Shift-Tab to select, Enter to run, or press the key shown on a button.
 Default leader in standalone mode: Space. Existing user maps take precedence.
 Space Space: commands. Space e: explorer. Space ff/fg/fr: files/text/recent.
 Space bb: buffers. Space h: home. Space ,: settings.
+Space mn/mo/mx/mf: note/outline/checkbox/follow Markdown link.
+Space gs/gd: Git status/current-file diff. Project sessions are automatic.
 Space y/p: copy/paste. u/Ctrl-R: undo/redo. F8: delete entire line, also in Insert.
 Cmd shortcuts need terminal support. See examples/ghostty.conf for Cmd-Backspace.
 Native Neovim commands and modes remain available.
@@ -36,6 +43,8 @@ Native Neovim commands and modes remain available.
 Settings: theme, background, dashboard, clipboard, undo, mouse, numbers,
 relative_numbers, indent, mappings, keys, ui={statusline}, explorer={side,width,hidden,auto_open},
 projects={root,recent_limit}, config_file. Standalone also accepts plugins (lazy specs).
+markdown={wrap,outline_key,checkbox_key,follow_key}, notes={path},
+sessions={enabled,auto_restore}.
 theme=false keeps the current theme; mappings=false disables Coffe keymaps.
 
 Neo-tree: ? for help. Offline tree: h/l collapse/expand, Enter/o open, s split,

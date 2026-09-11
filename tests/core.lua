@@ -46,10 +46,10 @@ local function check()
   assert(#p.recent() == 0, "corrupt history must not crash")
   a.explorer = explorer
   vim.cmd.enew()
-  vim.cmd.CoffeKeys()
+  vim.cmd.CfKeys()
   assert(vim.bo.filetype == "coffe_help")
   vim.cmd.close()
-  vim.cmd.CoffeCommands()
+  vim.cmd.CfCommands()
   local palette = table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n")
   assert(palette:find("Find files", 1, true), "command palette misses file action")
   local palette_escape = vim.fn.maparg('<Esc>', 'i', false, true).callback

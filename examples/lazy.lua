@@ -9,6 +9,9 @@ return {
       theme = "gruvbox",
       explorer = { side = "left", width = 32 },
       ui = { statusline = false }, -- keep your existing statusline
+      markdown = { wrap = true },
+      notes = { path = "~/Documents/Coffe/inbox.md" },
+      sessions = { enabled = true, auto_restore = true },
       config_file = vim.fn.stdpath("config") .. "/lua/plugins/coffe.lua",
     },
     config = function(_, opts) require("coffe").setup(opts) end,

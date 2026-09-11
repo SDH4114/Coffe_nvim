@@ -179,7 +179,7 @@ function M.open()
   map('m', function() local entry = current(); if entry then M.marked[entry.path] = not M.marked[entry.path]; M.refresh(entry.path) end end, 'mark entry')
   map('q', M.close, 'close explorer'); map('R', M.refresh, 'refresh explorer')
   map('.', function() M.hidden = not M.hidden; M.refresh() end, 'toggle hidden files')
-  map('?', function() vim.cmd.CoffeKeys() end, 'keyboard guide')
+  map('?', function() vim.cmd.CfKeys() end, 'keyboard guide')
   map('<2-LeftMouse>', function()
     local mouse = vim.fn.getmousepos()
     if mouse.winid == M.win and M.entries[mouse.line] then vim.api.nvim_win_set_cursor(M.win, { mouse.line, 0 }); open_file(current(), 'edit') end

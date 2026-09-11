@@ -57,6 +57,10 @@ end
 function M.open(path)
   path = util.path(path)
   if vim.fn.isdirectory(path) ~= 1 then util.notify('Folder does not exist: ' .. path, vim.log.levels.WARN); return false end
+  local sessions = require('coffe.sessions')
+  local previous = vim.fn.getcwd()
+  if previous ~= path then sessions.save(previous) end
+  local restore = require('coffe').config.sessions.auto_restore and sessions.can_restore()
   vim.cmd.cd(vim.fn.fnameescape(path))
   M.remember(path)
   local branch_result = vim.fn.executable('git') == 1
@@ -64,6 +68,7 @@ function M.open(path)
   local branch = branch_result and branch_result.code == 0 and vim.trim(branch_result.stdout or '') or ''
   util.notify('Project: ' .. vim.fn.fnamemodify(path, ':t') .. (branch ~= '' and (' · git:' .. branch) or ''))
   if vim.bo.filetype == 'coffe' then vim.cmd.enew() end
+  if restore then sessions.restore(path) end
   require('coffe.actions').explorer(false)
   return true
 end

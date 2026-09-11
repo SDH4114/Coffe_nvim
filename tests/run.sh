@@ -12,3 +12,4 @@ nvim --headless -u "$COFFE_TEST_ROOT/init.lua" '+lua assert(require("coffe").con
 cd "$COFFE_TEST_ROOT"
 nvim --headless -u NONE -l "$COFFE_TEST_ROOT/tests/smoke.lua"
 nvim --headless -u NONE -l "$COFFE_TEST_ROOT/tests/workflows.lua"
+nvim --headless -u NONE -l "$COFFE_TEST_ROOT/tests/features.lua"

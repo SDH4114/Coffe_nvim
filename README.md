@@ -1,41 +1,111 @@
 # ☕ Coffe.nvim
 
-Neovim с кофейной темой, стартовым экраном, проектами, файловой панелью и удобными
-клавишами. Coffe можно запускать как отдельную сборку или подключать как Lua-плагин
-к существующему Neovim / lazy.nvim / LazyVim. Обычные режимы и команды Neovim доступны.
+Coffe.nvim — готовая сборка и Lua-плагин для **Neovim 0.11+**. Она рассчитана на
+программистов и тех, кто редактирует Markdown и обычные текстовые файлы прямо в
+терминале.
 
-## Установка одной командой
+Coffe добавляет стартовый экран, проекты, файловую панель, поиск, Git/diff,
+Markdown-инструменты, быстрые заметки и автоматические сессии. Нативные команды и
+режимы Neovim остаются доступными.
 
-Нужны **Neovim 0.11+** и Git. На macOS: `brew install neovim git ripgrep`.
+## Быстрая установка
+
+### 1. Проверь требования
+
+Обязательны:
+
+- Neovim 0.11 или новее;
+- Git;
+- `curl` для установки одной командой.
+
+Рекомендуется `ripgrep` — он ускоряет поиск файлов и нужен для поиска текста по
+проекту.
+
+Проверка:
+
+```sh
+nvim --version | head -n 1
+git --version
+rg --version
+```
+
+На macOS зависимости можно установить через Homebrew:
+
+```sh
+brew install neovim git ripgrep
+```
+
+На Linux сначала проверь версию Neovim из репозитория своего дистрибутива: она
+должна быть не ниже 0.11.
+
+### 2. Установи Coffe.nvim
+
 Вставь в терминал:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SDH4114/Coffe_nvim/main/install.sh | sh
 ```
 
-Установщик скачает Coffe.nvim, создаст команду `~/.local/bin/coffe`, положит отдельный
-конфиг в `~/.config/coffe/coffe.lua` и сразу установит стандартные плагины. Запуск:
+Установщик:
+
+- скачает проект в `~/.local/share/coffe.nvim`;
+- создаст команду `~/.local/bin/coffe`;
+- создаст пользовательский конфиг `~/.config/coffe/coffe.lua`;
+- установит стандартные плагины;
+- не изменит `~/.config/nvim` и обычный Neovim.
+
+### 3. Запусти
 
 ```sh
 ~/.local/bin/coffe
-~/.local/bin/coffe ~/Projects/my-app/main.py
 ```
 
-Если `~/.local/bin` уже находится в `PATH`, достаточно команды `coffe`. В противном
-случае установщик покажет одну строку, которую можно вручную добавить в `~/.zshrc`.
-Он не меняет shell-конфиг автоматически и не подменяет команду `nvim`.
+Открыть текущую папку, проект или конкретный файл:
 
-Повторный запуск той же команды безопасно обновляет Coffe через Git и сохраняет
-`~/.config/coffe/coffe.lua`. Если код установленной копии изменён вручную, обновление
-остановится, чтобы не потерять изменения.
+```sh
+~/.local/bin/coffe .
+~/.local/bin/coffe ~/Projects/my-app
+~/.local/bin/coffe README.md
+~/.local/bin/coffe src/main.py tests/test_main.py
+```
 
-Конфигурация, данные плагинов и история Coffe отделены от обычного Neovim с помощью
-`NVIM_APPNAME=coffe`. Твой `~/.config/nvim`, обычные плагины и настройки терминала
-не изменяются.
+Если `~/.local/bin` находится в `PATH`, используй короткую команду:
 
-### Ручной запуск из репозитория
+```sh
+coffe
+coffe .
+coffe README.md
+```
 
-Для разработки или запуска без установки:
+Если команда `coffe` не найдена, добавь в `~/.zshrc`:
+
+```sh
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+Затем перезапусти терминал или выполни `source ~/.zshrc`.
+
+## Установка без внешних плагинов
+
+Чтобы установить только автономное ядро и не скачивать плагины:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/SDH4114/Coffe_nvim/main/install.sh | COFFE_SKIP_PLUGINS=1 sh
+```
+
+Запустить Coffe без bootstrap lazy.nvim:
+
+```sh
+COFFE_OFFLINE=1 coffe
+```
+
+Без сети продолжают работать встроенная тема, dashboard, explorer, picker,
+Markdown, заметки, проекты, сессии и Git/diff. Для поиска текста всё равно нужен
+локально установленный `ripgrep`.
+
+## Ручной запуск из репозитория
+
+Подходит для разработки или проверки проекта перед установкой:
 
 ```sh
 git clone https://github.com/SDH4114/Coffe_nvim.git
@@ -43,137 +113,354 @@ cd Coffe_nvim
 ./scripts/coffe
 ```
 
-Без скачивания зависимостей:
+Открыть файл или каталог:
+
+```sh
+./scripts/coffe README.md
+./scripts/coffe .
+```
+
+Offline-запуск:
 
 ```sh
 COFFE_OFFLINE=1 ./scripts/coffe
 ```
 
-При отсутствии lazy.nvim доступны встроенная кофейная палитра, файловая панель,
-поиск, проекты и клавиши. Если lazy.nvim уже установлен, флаг запрещает его bootstrap,
-но не сетевые команды самого менеджера. Полностью без менеджера: `NVIM_APPNAME=coffe-demo nvim -u ./examples/init.lua`.
+## Обновление
 
-## Что есть
+Повтори команду установки:
 
-- Адаптивная стартовая страница с крупным логотипом **COFFE**, последними и закреплёнными
-  проектами, недавними файлами, текущим каталогом и Git-веткой.
-  Появляется только при пустом запуске; файлы и stdin не заменяет. Вызвать вручную:
-  `:Coffe`.
-- **Gruvbox Dark** по умолчанию; встроенная палитра Coffe используется без зависимостей.
-- **Neo-tree** слева, переключается направо через конфиг. Создание, переименование,
-  удаление и навигация. Без Neo-tree работает встроенная панель.
-- **Telescope**: поиск файлов и текста; без него работает встроенный fuzzy picker с preview.
-- Единая command palette, переключатель буферов и общий интерфейс floating-окон.
-- Системный буфер обмена, отмена и повтор действий, история отмены между запусками.
-- Строка состояния, Git-маркеры изменений, подсказки клавиш, автоскобки, автодополнение
-  слов и путей. nvim-cmp готов принимать подсказки от настроенного LSP.
-- Обычные lazy.nvim-спецификации для дополнительных плагинов.
+```sh
+curl -fsSL https://raw.githubusercontent.com/SDH4114/Coffe_nvim/main/install.sh | sh
+```
 
-Языковые серверы, форматтеры и отладчики не устанавливаются автоматически. В существующей
-сборке ими продолжает управлять твоя конфигурация; в самостоятельной их можно добавить
-через `plugins` и обычный `vim.lsp.config` / `vim.lsp.enable`.
+Установщик выполнит безопасное fast-forward обновление и сохранит
+`~/.config/coffe/coffe.lua`. Если установленный код был изменён вручную, обновление
+остановится, чтобы не потерять эти изменения.
 
-## Клавиши
+## Что входит
 
-Leader в самостоятельной сборке — **Space**. Существующие пользовательские сочетания
-в режиме плагина имеют приоритет. `:CoffeKeys` показывает справку.
+- адаптивный dashboard с логотипом COFFE, проектами и недавними файлами;
+- Gruvbox Dark и встроенная offline-тема;
+- Neo-tree или автономный файловый explorer;
+- Telescope или автономный fuzzy picker с preview;
+- поиск файлов, текста, недавних файлов и открытых буферов;
+- создание, открытие и закрепление проектов;
+- Markdown outline, checkbox и переход по локальным ссылкам;
+- быстрые заметки в настраиваемый `inbox.md`;
+- автоматическое восстановление файлов, вкладок, split-окон и курсоров;
+- Git status, diff текущего файла и diff репозитория;
+- строка состояния с веткой и количеством изменённых файлов;
+- persistent undo, системный clipboard, автоскобки и автодополнение;
+- command palette и встроенная справка.
+
+Языковые серверы, форматтеры и отладчики автоматически не устанавливаются. Их можно
+добавить через обычные lazy.nvim specs и `vim.lsp.config` / `vim.lsp.enable`.
+
+## Все команды
+
+Все пользовательские команды Coffe начинаются с `Cf`. Neovim требует, чтобы
+пользовательская команда начиналась с заглавной буквы.
+
+| Команда | Что делает |
+| --- | --- |
+| `:Cf` | Открывает главный экран |
+| `:Cf <action>` | Выполняет действие без открытия dashboard |
+| `:CfCommands` | Открывает общую command palette |
+| `:CfFiles` | Ищет файл в текущем проекте |
+| `:CfSearch` | Ищет текст по проекту через ripgrep |
+| `:CfRecent` | Показывает недавно открытые файлы |
+| `:CfBuffers` | Показывает открытые буферы; `Ctrl-X` закрывает сохранённый буфер |
+| `:CfExplorer` | Открывает или закрывает файловую панель |
+| `:CfSettings` | Открывает активный файл конфигурации Coffe |
+| `:CfCreateProject` | Создаёт проект, не перезаписывая существующий каталог |
+| `:CfOpenProject` | Предлагает выбрать каталог проекта |
+| `:CfOpenProject {path}` | Открывает указанный каталог проекта |
+| `:CfProjects` | Показывает недавние и закреплённые проекты |
+| `:CfPinProject` | Закрепляет или открепляет текущий проект |
+| `:CfNote` | Открывает окно быстрой заметки |
+| `:CfMarkdown` | Показывает outline заголовков текущего Markdown-файла |
+| `:CfGit` | Показывает staged, unstaged, renamed и untracked файлы |
+| `:CfDiff` | Показывает staged и unstaged diff текущего файла |
+| `:CfDiffAll` | Показывает staged и unstaged diff всего репозитория |
+| `:CfKeys` | Открывает встроенную справку по клавишам |
+| `:checkhealth coffe` | Проверяет локальные требования и clipboard |
+
+Действия для `:Cf <action>`:
+
+| Действие | Эквивалент |
+| --- | --- |
+| `home` | `:Cf` |
+| `commands` | `:CfCommands` |
+| `files` | `:CfFiles` |
+| `search` | `:CfSearch` |
+| `recent` | `:CfRecent` |
+| `buffers` | `:CfBuffers` |
+| `explorer` | `:CfExplorer` |
+| `settings` | `:CfSettings` |
+| `new` | `:CfCreateProject` |
+| `projects` | `:CfProjects` |
+| `note` | `:CfNote` |
+| `markdown` | `:CfMarkdown` |
+| `git` | `:CfGit` |
+| `diff` | `:CfDiff` |
+| `diffall` | `:CfDiffAll` |
+| `help` | `:CfKeys` |
+
+Примеры:
+
+```vim
+:Cf files
+:Cf search
+:Cf note
+:Cf git
+:Cf diffall
+```
+
+## Основные клавиши
+
+Leader в самостоятельной сборке — `Space`. В режиме плагина используется leader
+текущей конфигурации. Существующие пользовательские keymaps имеют приоритет.
 
 | Действие | Клавиши |
 | --- | --- |
 | Command palette | `Space Space` |
-| Показать / скрыть файловую панель | `Space e` |
-| Поиск файлов / текста / недавних файлов | `Space ff` / `Space fg` / `Space fr` |
-| Найти открытый буфер | `Space bb` |
-| Главная / настройки / справка | `Space h` / `Space ,` / `Space ?` |
-| Создать / открыть / последние проекты | `Space pn` / `Space po` / `Space pr` |
-| Копировать строку или выделение | `Space y` |
-| Вставить / заменить выделение | `Space p` |
-| Отменить / повторить | `u` / `Ctrl-R`, также `Space u` / `Space U` |
-| Удалить слово | `diw`; в Insert — `Ctrl-W` или `Alt-Backspace` |
-| Удалить всю строку | `dd`; в Normal и Insert — `F8` или `Cmd-Backspace` |
-| Сохранить | `Ctrl-S` / `Cmd-S` |
+| Dashboard | `Space h` |
+| Explorer | `Space e` |
+| Файлы / текст / недавние | `Space ff` / `Space fg` / `Space fr` |
+| Открытые буферы | `Space bb` |
+| Создать / открыть / выбрать проект | `Space pn` / `Space po` / `Space pr` |
+| Быстрая заметка | `Space mn` |
+| Markdown outline | `Space mo` |
+| Переключить Markdown checkbox | `Space mx` |
+| Перейти по локальной Markdown-ссылке | `Space mf` |
+| Git status | `Space gs` |
+| Diff текущего файла | `Space gd` |
+| Настройки / справка | `Space ,` / `Space ?` |
 | Следующий / предыдущий / закрыть буфер | `Space bn` / `Space bp` / `Space bd` |
-| Перейти между окнами | `Ctrl-W`, затем `h/j/k/l` |
+| Копировать / вставить | `Space y` / `Space p` |
+| Сохранить | `Ctrl-S` или `Cmd-S` |
+| Удалить строку | `dd`, `F8` или `Cmd-Backspace` |
 
-На главном экране действия выбираются стрелками, `j/k` или `Tab/Shift-Tab` и
-запускаются через `Enter`. Буквы на кнопках выполняют действие сразу.
+Нативные `u`, `Ctrl-R`, `Ctrl-V`, `Ctrl-W`, `dd` и `dw` не заменяются.
 
-Выделение: `v` — символы, `V` — строки, `Ctrl-V` — блок. `Cmd-C/V/X`, `Cmd-Z`,
-`Shift-Cmd-Z` работают, если терминал или GUI передаёт эти клавиши Neovim.
-В Ghostty `Cmd-C/V` обычно обрабатываются терминалом: для выделения внутри Neovim
-надёжный вариант — `Space y/p`. Для `Cmd-Backspace` есть ручная настройка в
-[examples/ghostty.conf](examples/ghostty.conf): она передаёт F8. Эта настройка действует
-на все приложения соответствующего терминала; автоматически Coffe её не устанавливает.
-Некоторые терминалы используют Ctrl-S для flow control; тогда используй `:w` или
-настрой терминал. Скопированные и удалённые строки также доступны через регистры Neovim.
+## Как пользоваться отдельными функциями
 
-В Neo-tree нажми `?` для справки. Встроенная панель: `h/l` свернуть/раскрыть,
-`Enter` или `o` открыть, `s` открыть в вертикальном split, `t` во вкладке, `P` preview,
-`m` отметить, `a` создать (путь с `/` в конце — папка), `r` переименовать,
-`D` удалить с подтверждением, `.` скрытые файлы, `R` обновить, `q` закрыть.
-Панель показывает Git-состояние и diagnostics загруженных файлов. Удаляет только файлы и пустые папки.
-Загруженные файлы перед переименованием или удалением нужно закрыть через `:bd`.
-Во встроенном поиске можно сразу вводить fuzzy-фильтр; стрелки или `Ctrl-N/P` выбирают,
-`Enter` открывает, `Ctrl-O` показывает preview, `Esc` закрывает. В списке буферов
-`Ctrl-X` закрывает только сохранённый буфер. В проектах `Ctrl-T` закрепляет проект.
+### Быстрые заметки
 
-## Настройка и дополнительные плагины
+1. Выполни `:CfNote` или нажми `Space mn`.
+2. Напиши текст.
+3. Выполни `:w`, чтобы добавить заметку с датой и временем в `notes.path`.
+4. Нажми `Esc`, затем `q`, чтобы закрыть окно без сохранения.
 
-Пример полей в `~/.config/coffe/coffe.lua` (при ручном запуске — в корневом `coffe.lua`):
+Путь по умолчанию: `~/Documents/Coffe/inbox.md`.
+
+### Markdown
+
+- `:CfMarkdown` или `Space mo` — список заголовков и переход к разделу;
+- `Space mx` — переключение `- [ ]` и `- [x]`;
+- `Space mf` — переход по `[название](file.md)` или `[[wiki-link]]`;
+- перенос длинных строк включён визуально и не изменяет файл.
+
+### Git и diff
+
+- `:CfGit` или `Space gs` — изменённые файлы;
+- `Enter` в Git picker — открыть выбранный файл;
+- `Ctrl-O` — preview diff;
+- `:CfDiff` или `Space gd` — diff текущего файла;
+- `:CfDiffAll` — diff всего репозитория;
+- `q` закрывает окно diff.
+
+### Автоматические сессии
+
+Сессия сохраняется перед выходом и перед сменой проекта. При чистом запуске проекта
+Coffe восстанавливает открытые файлы, вкладки, split-окна и позиции курсоров.
+Несохранённые буферы не закрываются и не перезаписываются. Отдельных команд сохранения
+и восстановления нет.
+
+### Explorer
+
+Во встроенной offline-панели:
+
+| Клавиша | Действие |
+| --- | --- |
+| `h` / `l` | Свернуть / раскрыть каталог |
+| `Enter` или `o` | Открыть файл |
+| `s` | Открыть в вертикальном split |
+| `t` | Открыть во вкладке |
+| `P` | Preview |
+| `a` | Создать файл; путь с `/` в конце создаёт каталог |
+| `r` | Переименовать |
+| `D` | Удалить после подтверждения |
+| `m` | Отметить элемент |
+| `.` | Показать или скрыть скрытые файлы |
+| `R` | Обновить панель |
+| `?` | Справка |
+| `q` | Закрыть панель |
+
+Explorer удаляет только файлы и пустые каталоги. Загруженный файл перед
+переименованием или удалением нужно закрыть через `:bd`.
+
+## Настройка
+
+Конфиг установленной сборки: `~/.config/coffe/coffe.lua`.
+
+Открыть его можно через `:CfSettings`. После изменения перезапусти Neovim.
 
 ```lua
-explorer = { side = "right", width = 38, auto_open = false },
-ui = { statusline = true },
-indent = 4,
-relative_numbers = true,
-keys = { delete_line = "<F8>" },
-plugins = {
-  { "numToStr/Comment.nvim", opts = {} },
-},
+return {
+  theme = "gruvbox",
+  background = "dark",
+  dashboard = true,
+  clipboard = true,
+  undo = true,
+  mouse = true,
+  numbers = true,
+  relative_numbers = false,
+  indent = 2,
+
+  ui = { statusline = true },
+  explorer = { side = "left", width = 32, auto_open = false },
+  projects = { root = "~/Projects", recent_limit = 20 },
+  markdown = {
+    wrap = true,
+    outline_key = "<leader>mo",
+    checkbox_key = "<leader>mx",
+    follow_key = "<leader>mf",
+  },
+  notes = { path = "~/Documents/Coffe/inbox.md" },
+  sessions = { enabled = true, auto_restore = true },
+
+  keys = {
+    palette = "<leader><space>",
+    explorer = "<leader>e",
+    files = "<leader>ff",
+    search = "<leader>fg",
+    recent = "<leader>fr",
+    buffers = "<leader>bb",
+    note = "<leader>mn",
+    git = "<leader>gs",
+    diff = "<leader>gd",
+    dashboard = "<leader>h",
+    settings = "<leader>,",
+  },
+
+  plugins = {
+    -- { "numToStr/Comment.nvim", opts = {} },
+  },
+}
 ```
 
-`false` отключает отдельную клавишу, `mappings = false` — все сочетания Coffe.
-`theme = false` оставляет текущую тему. В режиме плагина `config_file` указывает на
-реальный файл настроек; кнопка Settings открывает именно его.
-`:Lazy` управляет зависимостями, обновления выполняются вручную. Проверенные версии
-сохранены в `lazy-lock.json`; при первом старте файл копируется в state-каталог Coffe,
-где lazy.nvim хранит последующие изменения. Вернуть версии: `:Lazy restore`.
+Полезные правила:
 
-Для существующего lazy.nvim / LazyVim достаточно обычной спецификации:
+- `theme = false` сохраняет тему существующей конфигурации;
+- `mappings = false` отключает все keymaps Coffe;
+- `false` вместо отдельной клавиши отключает только её;
+- `ui.statusline = false` сохраняет существующую statusline;
+- `sessions.enabled = false` отключает хранение сессий;
+- `explorer.side` принимает `"left"` или `"right"`.
+
+## Подключение как плагина
+
+Если у тебя уже есть lazy.nvim или LazyVim, добавь:
 
 ```lua
 {
   "SDH4114/Coffe_nvim",
   lazy = false,
   priority = 1000,
-  opts = {},
+  opts = {
+    theme = false,
+    ui = { statusline = false },
+    explorer = { side = "left", width = 32 },
+    config_file = vim.fn.stdpath("config") .. "/lua/plugins/coffe.lua",
+  },
 }
 ```
 
-В этом режиме работают встроенная тема, dashboard, explorer, picker и проекты без
-дополнительных зависимостей. Расширенный пример с Gruvbox, Neo-tree и Telescope есть в
-[examples/lazy.lua](examples/lazy.lua). Не подключай корневой `init.lua` в уже работающий
-менеджер: Coffe не должен запускать второй lazy.nvim. При другом стартовом экране оставь
-только один dashboard включённым.
+В этом режиме Coffe не запускает второй lazy.nvim и не забирает управление LSP,
+форматтерами или отладчиками. Расширенный пример находится в
+[`examples/lazy.lua`](examples/lazy.lua).
 
-## Проверки
+## Где хранятся файлы
+
+| Данные | Путь |
+| --- | --- |
+| Код установленной сборки | `~/.local/share/coffe.nvim` |
+| Команда запуска | `~/.local/bin/coffe` |
+| Пользовательский конфиг | `~/.config/coffe/coffe.lua` |
+| Плагины и данные Neovim | `~/.local/share/coffe` |
+| Сессии, undo и история | `~/.local/state/coffe` |
+| Быстрые заметки по умолчанию | `~/Documents/Coffe/inbox.md` |
+
+Обычные `~/.config/nvim`, `~/.local/share/nvim` и команда `nvim` не изменяются.
+
+## Возможные проблемы
+
+### `coffe: command not found`
+
+Добавь `~/.local/bin` в `PATH` или запускай `~/.local/bin/coffe`.
+
+### Установлена старая версия Neovim
+
+Проверь `nvim --version`. Coffe требует 0.11+. Обнови Neovim и повтори установку.
+
+### Не работает поиск текста
+
+Установи ripgrep (`brew install ripgrep`) и проверь `rg --version`.
+
+### Не скачались плагины
+
+Проверь интернет и Git, затем повтори установку. Ядро можно запустить без плагинов:
+
+```sh
+COFFE_OFFLINE=1 coffe
+```
+
+### Не работают Cmd-сочетания
+
+Терминал должен передавать эти клавиши Neovim. Переносимый вариант удаления строки —
+`F8`. Пример настройки Ghostty находится в
+[`examples/ghostty.conf`](examples/ghostty.conf). Coffe не изменяет конфиг терминала.
+
+### Проверка состояния
+
+Внутри Coffe выполни `:checkhealth coffe`.
+
+## Удаление
+
+Перед удалением сохрани `~/.config/coffe/coffe.lua` и
+`~/Documents/Coffe/inbox.md`, если они нужны.
+
+На macOS можно переместить установленную сборку в Корзину:
+
+```sh
+mkdir -p "$HOME/.Trash/Coffe.nvim-backup"
+mv "$HOME/.local/share/coffe.nvim" "$HOME/.Trash/Coffe.nvim-backup/"
+mv "$HOME/.local/bin/coffe" "$HOME/.Trash/Coffe.nvim-backup/"
+mv "$HOME/.config/coffe" "$HOME/.Trash/Coffe.nvim-backup/"
+mv "$HOME/.local/share/coffe" "$HOME/.Trash/Coffe.nvim-backup/" 2>/dev/null || true
+mv "$HOME/.local/state/coffe" "$HOME/.Trash/Coffe.nvim-backup/" 2>/dev/null || true
+```
+
+Заметки не удаляются автоматически, потому что могут содержать пользовательский текст.
+
+## Проверка проекта для разработчиков
 
 ```sh
 bash tests/run.sh
+git diff --check
 ```
 
-Тесты изолируют state/data/config и проверяют реальные операции с текстом, undo/redo,
-проектами, файлами, поиском, панелью с обеих сторон, пользовательскими сочетаниями
-и несохранёнными буферами. `:checkhealth coffe` проверяет локальные требования.
-Для сборки с уже установленными зависимостями:
+Проверка с установленными внешними плагинами:
 
 ```sh
 ./scripts/coffe --headless '+luafile tests/plugins.lua'
 ```
 
-Проверено на Neovim 0.12.2 / macOS: автономное ядро и запуск настоящих Gruvbox,
-Neo-tree, Telescope, nvim-cmp, gitsigns, lualine и which-key.
+Проект проверен на macOS с Neovim 0.12.2. Основной минимальный контракт — Neovim
+0.11+.
 
-Документация зависимостей: [lazy.nvim](https://lazy.folke.io/spec),
-[Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim),
-[Ghostty keybindings](https://ghostty.org/docs/config/keybind).
+## Лицензия
+
+См. [`LICENSE`](LICENSE).

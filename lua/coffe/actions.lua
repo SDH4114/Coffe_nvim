@@ -2,6 +2,11 @@ local M = {}
 function M.settings()
   vim.cmd.edit(vim.fn.fnameescape(require("coffe").config.config_file))
 end
+function M.note() return require('coffe.notes').open() end
+function M.markdown() return require('coffe.markdown').outline() end
+function M.git() return require('coffe.git').open_status() end
+function M.diff() return require('coffe.git').open_diff() end
+function M.diff_all() return require('coffe.git').open_diff_all() end
 function M.explorer(toggle)
   local c = require("coffe").config.explorer
   local ok, tree = pcall(require, "neo-tree.command")
@@ -44,11 +49,16 @@ function M.palette()
     { label = "Workspace · Switch buffer", run = M.buffers },
     { label = "Workspace · Toggle explorer", run = M.explorer },
     { label = "Workspace · Dashboard", run = function() require("coffe.dashboard").open() end },
+    { label = "Writing · Quick note", run = M.note },
+    { label = "Writing · Markdown outline", run = M.markdown },
+    { label = "Git · Status", run = M.git },
+    { label = "Git · Diff current file", run = M.diff },
+    { label = "Git · Diff repository", run = M.diff_all },
     { label = "Projects · Create project", run = projects.create },
     { label = "Projects · Open folder", run = projects.prompt_open },
     { label = "Projects · Recent and pinned", run = projects.pick },
     { label = "Coffe · Open settings", run = M.settings },
-    { label = "Coffe · Keyboard guide", run = function() vim.cmd.CoffeKeys() end },
+    { label = "Coffe · Keyboard guide", run = function() vim.cmd.CfKeys() end },
     { label = "Editor · Save file", run = function() vim.cmd.write() end },
   }
   require("coffe.picker").open("Commands", items, function(item) item.run() end, {

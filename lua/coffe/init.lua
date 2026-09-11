@@ -44,6 +44,9 @@ function M.setup(opts)
   map('n', c.keys.recent, a.recent, 'Recent files')
   map('n', c.keys.buffers, a.buffers, 'Switch buffers')
   map('n', c.keys.palette, a.palette, 'Command palette')
+  map('n', c.keys.note, a.note, 'Quick note')
+  map('n', c.keys.git, a.git, 'Git status')
+  map('n', c.keys.diff, a.diff, 'Diff current file')
   map('n', c.keys.dashboard, function() require('coffe.dashboard').open() end, 'Home')
   map('n', c.keys.settings, a.settings, 'Settings')
   local register = c.clipboard and vim.fn.has('clipboard') == 1 and '+' or '"'
@@ -73,7 +76,7 @@ function M.setup(opts)
   map('n', '<leader>bn', '<cmd>bnext<cr>', 'Next buffer')
   map('n', '<leader>bp', '<cmd>bprevious<cr>', 'Previous buffer')
   map('n', '<leader>bd', '<cmd>bdelete<cr>', 'Close buffer')
-  map('n', '<leader>?', '<cmd>CoffeKeys<cr>', 'Show shortcuts')
+  map('n', '<leader>?', '<cmd>CfKeys<cr>', 'Show shortcuts')
   if c.ui and c.ui.statusline then require('coffe.statusline').setup() end
   local group = vim.api.nvim_create_augroup('Coffe', { clear = true })
   local function startup()
@@ -91,12 +94,16 @@ function M.setup(opts)
       vim.wo.signcolumn = 'auto'
     end
   end })
+  vim.api.nvim_create_autocmd('FileType', { group = group, pattern = 'markdown', callback = function(args)
+    require('coffe.markdown').setup_buffer(args.buf)
+  end })
   vim.api.nvim_create_autocmd('DiagnosticChanged', { group = group, callback = function() vim.cmd.redrawstatus() end })
   vim.api.nvim_create_autocmd({ 'BufWritePost', 'DirChanged' }, { group = group, callback = function()
     local tree = require('coffe.explorer')
     if tree.win and vim.api.nvim_win_is_valid(tree.win) then tree.root = vim.fn.getcwd(); tree.refresh() end
   end })
   require('coffe.commands').setup()
+  require('coffe.sessions').setup()
   return M
 end
 return M

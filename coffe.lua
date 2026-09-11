@@ -12,9 +12,13 @@ return {
   indent = 2,
   explorer = { side = "left", width = 32, auto_open = false },
   projects = { root = "~/Projects", recent_limit = 20 },
+  markdown = { wrap = true, outline_key = "<leader>mo", checkbox_key = "<leader>mx", follow_key = "<leader>mf" },
+  notes = { path = "~/Documents/Coffe/inbox.md" },
+  sessions = { enabled = true, auto_restore = true },
   keys = {
     palette = "<leader><space>", explorer = "<leader>e", files = "<leader>ff", search = "<leader>fg",
     recent = "<leader>fr", buffers = "<leader>bb",
+    note = "<leader>mn", git = "<leader>gs", diff = "<leader>gd",
     dashboard = "<leader>h", settings = "<leader>,",
     copy = "<leader>y", paste = "<leader>p",
     undo = "<leader>u", redo = "<leader>U",

@@ -13,6 +13,15 @@ local function keyboard_help()
     '  ' .. tostring(c.keys.files) .. '   Find files',
     '  ' .. tostring(c.keys.search) .. '   Search project text',
     '  ' .. tostring(c.keys.recent) .. '   Recent files', '',
+    '  WRITING', '',
+    '  ' .. tostring(c.keys.note) .. '   Quick note',
+    '  ' .. tostring(c.markdown.outline_key) .. '   Markdown outline',
+    '  ' .. tostring(c.markdown.checkbox_key) .. '   Toggle Markdown checkbox',
+    '  ' .. tostring(c.markdown.follow_key) .. '   Follow Markdown link', '',
+    '  GIT', '',
+    '  ' .. tostring(c.keys.git) .. '   Git status',
+    '  ' .. tostring(c.keys.diff) .. '   Diff current file',
+    '  :CfDiffAll   Diff repository', '',
     '  PROJECTS', '',
     '  Space pn   Create project', '  Space po   Open project', '  Space pr   Recent and pinned projects', '',
     '  EDITING', '',
@@ -43,22 +52,24 @@ function M.setup()
     home = function() require('coffe.dashboard').open() end,
     commands = a.palette, files = a.files, recent = a.recent, buffers = a.buffers,
     search = a.search, explorer = a.explorer, settings = a.settings,
+    note = a.note, markdown = a.markdown, git = a.git, diff = a.diff, diffall = a.diff_all,
     new = p.create, projects = p.pick, help = keyboard_help,
   }
   local aliases = {
-    CoffeCommands = 'commands', CoffeFiles = 'files', CoffeRecent = 'recent', CoffeBuffers = 'buffers',
-    CoffeSearch = 'search', CoffeExplorer = 'explorer', CoffeSettings = 'settings',
-    CoffeCreateProject = 'new', CoffeProjects = 'projects', CoffeKeys = 'help',
+    CfCommands = 'commands', CfFiles = 'files', CfRecent = 'recent', CfBuffers = 'buffers',
+    CfSearch = 'search', CfExplorer = 'explorer', CfSettings = 'settings',
+    CfCreateProject = 'new', CfProjects = 'projects', CfKeys = 'help',
+    CfNote = 'note', CfMarkdown = 'markdown', CfGit = 'git', CfDiff = 'diff', CfDiffAll = 'diffall',
   }
   for name, action in pairs(aliases) do vim.api.nvim_create_user_command(name, actions[action], { force = true }) end
-  vim.api.nvim_create_user_command('Coffe', function(args)
+  vim.api.nvim_create_user_command('Cf', function(args)
     local action = actions[args.args == '' and 'home' or args.args]
     if action then action() else require('coffe.util').notify('Unknown action ' .. args.args, vim.log.levels.WARN) end
   end, { nargs = '?', complete = function() return vim.tbl_keys(actions) end, force = true })
-  vim.api.nvim_create_user_command('CoffeOpenProject', function(args)
+  vim.api.nvim_create_user_command('CfOpenProject', function(args)
     if args.args == '' then p.prompt_open() else p.open(args.args) end
   end, { nargs = '?', complete = 'dir', force = true })
-  vim.api.nvim_create_user_command('CoffePinProject', function()
+  vim.api.nvim_create_user_command('CfPinProject', function()
     local pinned = p.toggle_pin(vim.fn.getcwd())
     require('coffe.util').notify(pinned and 'Project pinned' or 'Project unpinned')
   end, { force = true })

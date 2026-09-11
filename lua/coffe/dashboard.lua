@@ -54,8 +54,10 @@ function M.open()
       { key = 'g', label = 'Search text', detail = 'search project contents', run = actions.search },
       { key = 'b', label = 'Buffers', detail = 'switch or close', run = actions.buffers },
       { key = 'e', label = 'Explorer', detail = 'browse project files', run = actions.explorer },
+      { key = 'i', label = 'Quick note', detail = 'capture an idea', run = actions.note },
+      { key = 'v', label = 'Git status', detail = 'review changes', run = actions.git },
       { key = 'c', label = 'Commands', detail = 'all Coffe actions', run = actions.palette },
-      { key = '?', label = 'Keyboard guide', detail = 'shortcuts and help', run = function() vim.cmd.CoffeKeys() end },
+      { key = '?', label = 'Keyboard guide', detail = 'shortcuts and help', run = function() vim.cmd.CfKeys() end },
     }
     local pinned = projects.pinned()
     local recent = projects.recent()
@@ -176,8 +178,10 @@ function M.open()
   map('<CR>', run_selected); map('gg', function() select(1) end); map('G', function() select(#entries) end)
   map('q', function() vim.cmd.quit() end)
   for _, pair in ipairs({ { 'n', projects.create }, { 'o', projects.prompt_open }, { 'f', actions.files },
-    { 'g', actions.search }, { 'b', actions.buffers }, { 'e', actions.explorer }, { 'c', actions.palette },
-    { '?', function() vim.cmd.CoffeKeys() end } }) do map(pair[1], pair[2]); map(pair[1]:upper(), pair[2]) end
+    { 'g', actions.search }, { 'b', actions.buffers }, { 'e', actions.explorer }, { 'i', actions.note },
+    { 'v', actions.git }, { 'c', actions.palette }, { '?', function() vim.cmd.CfKeys() end } }) do
+    map(pair[1], pair[2]); map(pair[1]:upper(), pair[2])
+  end
   map('<LeftMouse>', function()
     local mouse = vim.fn.getmousepos()
     if mouse.winid == win and row_to_index[mouse.line] then select(row_to_index[mouse.line]); run_selected() end
