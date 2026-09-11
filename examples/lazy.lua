@@ -1,9 +1,7 @@
 -- Add to the plugins table in an existing lazy.nvim / LazyVim setup.
--- Replace the path with your clone location.
 return {
   {
-    dir = vim.fn.expand("~/giti/Coffe_nvim"),
-    name = "coffe.nvim",
+    "SDH4114/Coffe_nvim",
     lazy = false,
     priority = 1000,
     opts = {

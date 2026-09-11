@@ -1,6 +1,9 @@
 *coffe.txt*  A warm place to build.                            *coffe*
 
-Neovim 0.11+. Standalone: ./scripts/coffe. Config: coffe.lua.
+Neovim 0.11+. One-command standalone installation:
+curl -fsSL https://raw.githubusercontent.com/SDH4114/Coffe_nvim/main/install.sh | sh
+Run: ~/.local/bin/coffe. Installed config: ~/.config/coffe/coffe.lua.
+Repository checkout: ./scripts/coffe with config in ./coffe.lua.
 As a plugin: require('coffe').setup({...}). See examples/lazy.lua.
 
                                                              *:Coffe*

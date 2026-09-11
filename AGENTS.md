@@ -27,7 +27,7 @@ Dark. Нативные режимы и команды Neovim должны ост
 ```text
 scripts/coffe
   -> NVIM_APPNAME=coffe + корневой init.lua
-  -> coffe.lua (пользовательские настройки)
+  -> $COFFE_CONFIG_FILE, установленный ~/.config/coffe/coffe.lua или корневой coffe.lua
   -> require("coffe").setup(config) (ядро, клавиши, команды, autocmd)
   -> require("coffe.bootstrap").setup(config.plugins) (lazy.nvim и плагины)
 ```
@@ -40,6 +40,7 @@ scripts/coffe
 ```text
 Coffe_nvim/
 ├── init.lua                 # точка входа самостоятельной сборки
+├── install.sh              # one-command установка/обновление сборки
 ├── coffe.lua                # простой пользовательский конфиг сборки
 ├── lazy-lock.json           # проверенные версии внешних плагинов
 ├── plugin/coffe.lua         # только guard loaded_coffe; setup остаётся явным
@@ -65,9 +66,10 @@ Coffe_nvim/
 │   ├── coffe_config.lua     # конфиг автономного примера
 │   ├── lazy.lua             # подключение к lazy.nvim / LazyVim
 │   └── ghostty.conf         # ручная передача Cmd-Backspace как F8
-├── scripts/coffe            # изолированный launcher
+├── scripts/coffe            # изолированный launcher, включая запуск через symlink
 └── tests/
     ├── run.sh               # общий offline test runner
+    ├── install.sh           # изолированный тест установщика
     ├── core.lua             # ядро, команды, undo и безопасность проектов
     ├── smoke.lua            # пользовательские сценарии и совместимость keymaps
     ├── workflows.lua        # реальные операции explorer и поиска
@@ -107,6 +109,9 @@ lazy.nvim specs в поле `plugins` файла `coffe.lua`.
   `F8` для удаления строки. Не изменять конфиг терминала автоматически.
 - Не изменять `~/.config/nvim`, shell rc-файлы или пользовательские данные при запуске.
 - Состояние самостоятельной сборки хранится отдельно благодаря `NVIM_APPNAME=coffe`.
+- Установщик хранит код в `~/.local/share/coffe.nvim`, launcher в `~/.local/bin/coffe`,
+  а изменяемый пользователем конфиг в `~/.config/coffe/coffe.lua`; обновление не
+  перезаписывает этот конфиг и не правит shell rc автоматически.
 - `COFFE_OFFLINE=1` запрещает bootstrap lazy.nvim; ядро при этом должно запускаться.
 - Dashboard, picker, help и preview используют общий `coffe.ui`; picker сразу готов к вводу.
 - Встроенная statusline включается только если пользовательская statusline ещё не задана.

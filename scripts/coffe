@@ -1,6 +1,23 @@
 #!/bin/sh
 # Keep the user's normal Neovim installation and plugin data separate.
 set -eu
-COFFE_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+
+# Resolve an installed ~/.local/bin/coffe symlink before locating the repository.
+COFFE_LAUNCHER=$0
+while [ -L "$COFFE_LAUNCHER" ]; do
+  COFFE_LINK=$(readlink "$COFFE_LAUNCHER")
+  case "$COFFE_LINK" in
+    /*) COFFE_LAUNCHER=$COFFE_LINK ;;
+    *) COFFE_LAUNCHER=$(dirname -- "$COFFE_LAUNCHER")/$COFFE_LINK ;;
+  esac
+done
+COFFE_ROOT=$(CDPATH= cd -- "$(dirname -- "$COFFE_LAUNCHER")/.." && pwd)
+COFFE_USER_CONFIG=${XDG_CONFIG_HOME:-"$HOME/.config"}/coffe/coffe.lua
+
+if [ -z "${COFFE_CONFIG_FILE:-}" ] && [ -f "$COFFE_USER_CONFIG" ]; then
+  COFFE_CONFIG_FILE=$COFFE_USER_CONFIG
+fi
+
+export COFFE_ROOT COFFE_CONFIG_FILE
 export NVIM_APPNAME=coffe
 exec nvim -u "$COFFE_ROOT/init.lua" "$@"
