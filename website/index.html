@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Coffe.nvim is a focused Neovim workspace for terminal-first developers." />
+    <meta name="theme-color" content="#12110f" />
+    <title>Coffe.nvim — A calmer terminal workspace</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Coffe.nvim home"><span class="brand-mark">cf</span><span>Coffe.nvim</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#commands">Commands</a>
+        <a href="https://github.com/SDH4114/Coffe_nvim">GitHub</a>
+      </nav>
+      <a class="nav-cta" href="https://github.com/SDH4114/Coffe_nvim/archive/refs/heads/main.zip">Download</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span> Neovim, with a little more signal</p>
+          <h1>Your terminal.<br /><em>Less friction.</em></h1>
+          <p class="hero-lede">Coffe.nvim is a focused workspace for people who write code, Markdown, and ideas without leaving the terminal.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/SDH4114/Coffe_nvim/archive/refs/heads/main.zip">Download Coffe</a>
+            <a class="button button-ghost" href="https://github.com/SDH4114/Coffe_nvim">View source <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="compatibility">Neovim 0.11+ <span>·</span> macOS and Linux <span>·</span> offline core</p>
+        </div>
+        <div class="hero-terminal" aria-label="Coffe terminal preview">
+          <div class="terminal-bar"><span></span><span></span><span></span><code>coffe — ~/project</code></div>
+          <div class="terminal-body">
+            <p class="muted">~/project <span class="branch"> main</span></p>
+            <p><span class="prompt">❯</span> <span class="command">:CfGit</span></p>
+            <div class="git-lines">
+              <p><span class="green">●</span> src/coffe/commands.lua</p>
+              <p><span class="yellow">●</span> README.md</p>
+              <p><span class="dim">·</span> 2 changed · 0 staged</p>
+            </div>
+            <p class="terminal-cursor"><span class="prompt">❯</span> <span class="cursor"></span></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section-wrap feature-section">
+        <div class="section-heading"><p class="eyebrow">Built for the loop</p><h2>Small tools that keep<br /><em>your flow intact.</em></h2></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large"><span class="feature-index">01</span><div class="feature-icon">⌘</div><h3>Project-aware start</h3><p>Open a calm dashboard with recent projects, quick actions, and a clear path back into your work.</p><span class="feature-tag">WORKSPACE</span></article>
+          <article class="feature-card"><span class="feature-index">02</span><div class="feature-icon">⌁</div><h3>Markdown that moves</h3><p>Jump between headings, checkboxes, links, and notes without breaking concentration.</p><span class="feature-tag">WRITING</span></article>
+          <article class="feature-card"><span class="feature-index">03</span><div class="feature-icon">⌘</div><h3>Git in context</h3><p>See branch, status, and diffs right where you are. No context switch required.</p><span class="feature-tag">VERSION CONTROL</span></article>
+          <article class="feature-card"><span class="feature-index">04</span><div class="feature-icon">↗</div><h3>Quiet by default</h3><p>Native Neovim behavior stays intact. Coffe adds shortcuts around your habits, not over them.</p><span class="feature-tag">NATIVE FIRST</span></article>
+        </div>
+      </section>
+
+      <section id="commands" class="section-wrap command-section">
+        <div class="section-heading split-heading"><div><p class="eyebrow">Command palette</p><h2>One prefix.<br /><em>Every useful move.</em></h2></div><p>All Coffe commands use the same <code>:Cf</code> prefix, so they are easy to remember and discover.</p></div>
+        <div class="command-list">
+          <div class="command-row"><code>:Cf</code><span>Open the Coffe dashboard</span><kbd>leader c</kbd></div>
+          <div class="command-row"><code>:CfFiles</code><span>Find and open project files</span><kbd>leader f</kbd></div>
+          <div class="command-row"><code>:CfSearch</code><span>Search text with ripgrep</span><kbd>leader /</kbd></div>
+          <div class="command-row"><code>:CfNote</code><span>Append a quick note to your inbox</span><kbd>leader n</kbd></div>
+          <div class="command-row"><code>:CfGit</code><span>Show branch and working-tree status</span><kbd>leader g</kbd></div>
+          <div class="command-row"><code>:CfDiff</code><span>Review the current file diff</span><kbd>leader d</kbd></div>
+          <div class="command-row"><code>:CfKeys</code><span>Show the complete keymap</span><kbd>leader ?</kbd></div>
+        </div>
+      </section>
+
+      <section class="install-section section-wrap">
+        <div class="install-copy"><p class="eyebrow">Ready when you are</p><h2>Make Neovim feel<br /><em>like your place.</em></h2><p>Install the isolated build in one command. Your regular Neovim config stays untouched.</p></div>
+        <div class="install-card"><div class="install-label"><span>INSTALL</span><button id="copy-install" type="button">Copy command</button></div><code id="install-command">curl -fsSL https://raw.githubusercontent.com/SDH4114/Coffe_nvim/main/install.sh | sh</code><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">cf</span><span>Coffe.nvim</span></a><p>Terminal-first, quietly capable.</p><div><a href="https://github.com/SDH4114/Coffe_nvim">GitHub</a><span>·</span><a href="https://github.com/SDH4114/Coffe_nvim/blob/main/LICENSE">License</a></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
